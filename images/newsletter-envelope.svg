@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 88" fill="none" aria-hidden="true">
+  <!-- envelope body -->
+  <path
+    d="M12 34c0-2.2 1.8-4 4-4h68c2.2 0 4 1.8 4 4v38c0 2.2-1.8 4-4 4H16c-2.2 0-4-1.8-4-4V34Z"
+    stroke="#1b4b4a"
+    stroke-width="1.85"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- open back flap -->
+  <path
+    d="M12 34 50 58 88 34"
+    stroke="#1b4b4a"
+    stroke-width="1.85"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- open front flap -->
+  <path
+    d="M12 34c8 6 18 10 28 10s20-4 28-10"
+    stroke="#1b4b4a"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- leaf sprig emerging -->
+  <path
+    d="M58 26c-2 5-1 10 2 14"
+    stroke="#1b4b4a"
+    stroke-width="1.5"
+    stroke-linecap="round"
+  />
+  <path
+    d="M58 26c6-1 11 2 13 8-5-1-9-4-11-9"
+    stroke="#1b4b4a"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M60 32c4 0 7 2 8 6-3-1-6-2-8-5"
+    stroke="#1b4b4a"
+    stroke-width="1.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M56 38c-3 2-4 5-3 9"
+    stroke="#1b4b4a"
+    stroke-width="1.4"
+    stroke-linecap="round"
+  />
+</svg>

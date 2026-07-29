@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Support — Open Space Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html">Open Space Support</a><button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="resources.html">Resources</a><a href="apply.html">Apply for Support</a><a href="contact.html">Contact</a></nav></div></header>
+    <main>
+      <section class="page-hero"><div class="container"><h1>Tell us where you are. We'll help you find the next step.</h1><p>This takes about 10 minutes. You can save your progress and come back. Nothing here is shared beyond our support team.</p></div></section>
+      <section class="page-content"><div class="container">
+        <p><em>First draft — full multi-step form with secure Supabase backend coming in the Next.js build.</em></p>
+        <form class="newsletter-form" style="max-width:600px;margin:2rem auto 0;" onsubmit="event.preventDefault(); alert('Application portal will connect to secure database at launch.');">
+          <label>Full name<input type="text" required style="width:100%;padding:0.75rem;margin-top:0.25rem;border:1px solid #ccc;border-radius:4px;" /></label>
+          <label style="margin-top:1rem;display:block;">Email address<input type="email" required style="width:100%;padding:0.75rem;margin-top:0.25rem;border:1px solid #ccc;border-radius:4px;" /></label>
+          <label style="margin-top:1rem;display:flex;gap:0.5rem;align-items:flex-start;"><input type="checkbox" required style="margin-top:0.35rem;" /> I understand how my information will be used, and I'm happy to submit this application.</label>
+          <button class="btn btn-teal" type="submit" style="margin-top:1.5rem;">Send my application</button>
+        </form>
+      </div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-bottom"><p>© 2026 Open Space Support. All rights reserved.</p></div></footer>
+    <aside class="quick-exit" aria-label="Quick exit">Need to leave this page quickly? <a href="https://www.google.co.uk" rel="noopener noreferrer">Exit now</a></aside>
+    <script src="js/main.js"></script>
+  </body>
+</html>
