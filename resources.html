@@ -3,30 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resources — Open Space Support</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta
+      name="description"
+      content="Browse practical and emotional resources for life after leaving a high-control group - filter by category or explore everything in one place."
+    />
+    <title>All Resources - Open Space Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Karla:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=121" />
+    <link rel="stylesheet" href="css/resource-article.css?v=10" />
+    <link rel="stylesheet" href="css/resources-index.css?v=8" />
   </head>
   <body>
-    <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html">Open Space Support</a><button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="resources.html">Resources</a><a href="apply.html">Apply for Support</a><a href="contact.html">Contact</a></nav><a class="btn btn-gold header-cta" href="apply.html">Apply for Support</a></div></header>
-    <main>
-      <section class="page-hero"><div class="container"><h1>Find what you need, when you need it.</h1><p>No login required, no judgement, no pressure to explain your situation before you're ready.</p></div></section>
-      <section class="section section-muted"><div class="container"><p style="text-align:center;margin-bottom:2rem;">Every category below covers the practical and emotional side of that topic — written for people who are rebuilding, not people who are researching.</p>
-        <div class="card-grid">
-          <article class="card" id="career"><div class="card-image card-image-1"></div><div class="card-body"><span class="card-tag">Career & Employment</span><h3>Building a working life on your own terms.</h3></div></article>
-          <article class="card"><div class="card-image card-image-2"></div><div class="card-body"><span class="card-tag">Education & Training</span><h3>Catching up, starting over, or starting for the first time.</h3></div></article>
-          <article class="card"><div class="card-image card-image-3"></div><div class="card-body"><span class="card-tag">Financial Stability</span><h3>Making sense of money when no one taught you how.</h3></div></article>
-          <article class="card" id="emotional"><div class="card-image card-image-2"></div><div class="card-body"><span class="card-tag">Emotional Wellbeing</span><h3>Support for the weight that comes with big change.</h3></div></article>
-          <article class="card"><div class="card-image card-image-1"></div><div class="card-body"><span class="card-tag">Family & Relationships</span><h3>Navigating estrangement, shunning, and rebuilding connection.</h3></div></article>
-          <article class="card" id="shunning"><div class="card-image card-image-3"></div><div class="card-body"><span class="card-tag">Recovery from Shunning</span><h3>You're not the only one who's been through this.</h3></div></article>
-          <article class="card"><div class="card-image card-image-1"></div><div class="card-body"><span class="card-tag">Addiction & Family Recovery</span><h3>Understanding coping mechanisms, and finding a way through.</h3></div></article>
-          <article class="card"><div class="card-image card-image-3"></div><div class="card-body"><span class="card-tag">Leaving Safely</span><h3>Practical guidance if you're still deciding, or still inside.</h3></div></article>
-          <article class="card"><div class="card-image card-image-2"></div><div class="card-body"><span class="card-tag">Personal Growth</span><h3>Figuring out who you are, now that it's your choice.</h3></div></article>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Open Space Support</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="our-mission.html">Our Mission</a>
+          <a href="resources.html" aria-current="page">Resources</a>
+          <a href="apply.html">Apply for Support</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-gold header-cta" href="apply.html">Apply for Support</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero page-hero-compact">
+        <div class="container">
+          <h1>All Resources</h1>
+          <p>
+            Everything in one place. Filter by whatever's most relevant to you right now - or just
+            browse.
+          </p>
         </div>
-      </div></section>
+
+        <div class="resources-intro">
+          <p>
+            Every resource here is written for the practical and emotional side of rebuilding -
+            not general self-help, but guidance built specifically for people leaving
+            high-control religious groups. No login required, nothing to explain before you start
+            reading, and no assumption about where you are in the process.
+          </p>
+          <p>
+            We're adding new resources regularly. If there's something you'd like us to cover that
+            isn't here yet,
+            <a class="resources-intro-link" href="contact.html">let us know</a>
+            - every request genuinely shapes what we write next.
+          </p>
+        </div>
+      </section>
+
+      <section class="resources-prelaunch" id="resources-prelaunch" hidden>
+        <div class="container">
+          <div class="resources-prelaunch-inner">
+            <p>
+              We're building this library from the ground up. The first resources are on their way -
+              in the meantime, our
+              <a href="apply.html">Support Application Portal</a>
+              can connect you with help directly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="resources-index" id="resources-index">
+        <div class="container">
+          <div class="resources-filter-bar">
+            <label class="resources-filter-label" for="resource-category-filter">Show me:</label>
+            <select
+              class="resources-filter-select"
+              id="resource-category-filter"
+              name="category"
+              aria-controls="resources-grid resources-empty resources-external"
+            ></select>
+          </div>
+
+          <p class="resources-count" id="resources-count" aria-live="polite" aria-atomic="true">
+            Showing all resources
+          </p>
+
+          <div class="resources-article-grid" id="resources-grid" role="list"></div>
+
+          <div class="resources-empty" id="resources-empty" hidden>
+            <p>
+              We're still building out this section. New resources are added every week - check back
+              soon, or
+              <a href="contact.html">let us know</a>
+              what you'd find helpful here.
+            </p>
+          </div>
+
+          <div id="resources-external" class="resources-external-wrap" hidden></div>
+        </div>
+      </section>
+
+      <section class="resource-article-cta" aria-labelledby="resources-cta-heading">
+        <div class="resource-article-cta-inner">
+          <h2 id="resources-cta-heading">Can't find what you're looking for?</h2>
+          <p>
+            Not every situation fits neatly into a category. If you'd like to talk through something
+            specific, our support portal is confidential and free.
+          </p>
+          <a class="btn btn-gold" href="apply.html">Apply for Support</a>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-bottom"><p>© 2026 Open Space Support. All rights reserved.</p></div></footer>
-    <aside class="quick-exit" aria-label="Quick exit">Need to leave this page quickly? <a href="https://www.google.co.uk" rel="noopener noreferrer">Exit now</a></aside>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-logo">Open Space Support</p>
+          <p class="footer-note">
+            Practical support for people rebuilding after leaving a high-control group.
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Explore</p>
+          <a href="about.html">About Us</a>
+          <a href="our-mission.html">Our Mission</a>
+          <a href="resources.html">Resources</a>
+          <a href="apply.html">Apply for Support</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <p class="footer-heading">Legal</p>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="cookies.html">Cookie Policy</a>
+        </div>
+        <div>
+          <p class="footer-heading">Crisis support</p>
+          <p class="footer-crisis">
+            If you're in crisis or need immediate support, Samaritans are available 24/7 on
+            <strong>116 123</strong> (UK, free). Open Space Support provides practical resources but
+            isn't a crisis service.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Open Space Support. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <aside class="quick-exit" aria-label="Quick exit">
+      Need to leave this page quickly?
+      <a href="https://www.google.co.uk" rel="noopener noreferrer">Exit now</a>
+    </aside>
+
+    <script src="js/resources-data.js"></script>
+    <script src="js/external-resources-data.js?v=8"></script>
+    <script src="js/resources-external.js?v=3"></script>
+    <script src="js/resources-index.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -3,26 +3,356 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apply for Support — Open Space Support</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta
+      name="description"
+      content="Apply for confidential support from Open Space Support. A calm, private application - save your progress and return whenever you're ready."
+    />
+    <title>Apply for Support - Open Space Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Karla:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=120" />
+    <link rel="stylesheet" href="css/apply.css?v=4" />
   </head>
-  <body>
-    <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html">Open Space Support</a><button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="resources.html">Resources</a><a href="apply.html">Apply for Support</a><a href="contact.html">Contact</a></nav></div></header>
-    <main>
-      <section class="page-hero"><div class="container"><h1>Tell us where you are. We'll help you find the next step.</h1><p>This takes about 10 minutes. You can save your progress and come back. Nothing here is shared beyond our support team.</p></div></section>
-      <section class="page-content"><div class="container">
-        <p><em>First draft — full multi-step form with secure Supabase backend coming in the Next.js build.</em></p>
-        <form class="newsletter-form" style="max-width:600px;margin:2rem auto 0;" onsubmit="event.preventDefault(); alert('Application portal will connect to secure database at launch.');">
-          <label>Full name<input type="text" required style="width:100%;padding:0.75rem;margin-top:0.25rem;border:1px solid #ccc;border-radius:4px;" /></label>
-          <label style="margin-top:1rem;display:block;">Email address<input type="email" required style="width:100%;padding:0.75rem;margin-top:0.25rem;border:1px solid #ccc;border-radius:4px;" /></label>
-          <label style="margin-top:1rem;display:flex;gap:0.5rem;align-items:flex-start;"><input type="checkbox" required style="margin-top:0.35rem;" /> I understand how my information will be used, and I'm happy to submit this application.</label>
-          <button class="btn btn-teal" type="submit" style="margin-top:1.5rem;">Send my application</button>
-        </form>
-      </div></section>
+  <body class="apply-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Open Space Support</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="our-mission.html">Our Mission</a>
+          <a href="resources.html">Resources</a>
+          <a href="apply.html" class="is-active" aria-current="page">Apply for Support</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-gold header-cta" href="apply.html">Apply for Support</a>
+      </div>
+    </header>
+
+    <main id="main" class="apply-main">
+      <div class="container apply-container">
+        <!-- Confirmation (shown after successful submit) -->
+        <section
+          class="apply-confirmation"
+          id="apply-confirmation"
+          hidden
+          aria-labelledby="apply-confirmation-heading"
+        >
+          <h1 id="apply-confirmation-heading" tabindex="-1">
+            Received. You're not on your own with this anymore.
+          </h1>
+          <p>
+            We'll be in touch using the details you gave us, usually within a few days. If anything
+            changes, or you want to add something in the meantime, you can always email us - there's
+            no need to start over.
+          </p>
+          <a class="btn btn-teal" href="index.html">Return to homepage</a>
+        </section>
+
+        <!-- Application form -->
+        <div class="apply-layout" id="apply-layout">
+          <div class="apply-intro-block" id="apply-intro">
+            <div class="apply-intro-copy">
+              <h1>Tell us where you are. We'll help you find the next step.</h1>
+              <p class="apply-intro-sub">
+                This takes about 10 minutes, but there's no rush - you can save your progress and come
+                back whenever you're ready. Nothing here is shared beyond our support team, and you're
+                always in control of what you share.
+              </p>
+            </div>
+            <figure class="apply-intro-photo photo-frame">
+              <img
+                src="images/apply-intro.jpg"
+                alt=""
+                width="480"
+                height="360"
+                loading="eager"
+              />
+            </figure>
+          </div>
+
+          <form
+            class="apply-form"
+            id="apply-form"
+            novalidate
+            aria-labelledby="apply-form-title"
+          >
+            <div class="apply-form-toolbar">
+              <div class="apply-progress-wrap">
+                <div
+                  class="apply-progress"
+                  role="progressbar"
+                  aria-valuemin="1"
+                  aria-valuemax="4"
+                  aria-valuenow="1"
+                  aria-label="Application progress"
+                >
+                  <span class="apply-progress-segment is-active" data-step="1"></span>
+                  <span class="apply-progress-segment" data-step="2"></span>
+                  <span class="apply-progress-segment" data-step="3"></span>
+                  <span class="apply-progress-segment" data-step="4"></span>
+                </div>
+                <p class="apply-saved-note" id="apply-saved-note" aria-live="polite">
+                  Your progress is saved.
+                </p>
+              </div>
+              <button type="button" class="apply-save-exit" id="apply-save-exit">
+                Save and exit
+              </button>
+            </div>
+
+            <p class="apply-form-message" id="apply-form-message" role="status" tabindex="-1" hidden></p>
+
+            <!-- Step 1 -->
+            <fieldset class="apply-step" data-step="1" id="apply-step-1">
+              <legend class="visually-hidden">Step 1: Personal Information</legend>
+              <h2 class="apply-step-heading" id="apply-form-title">A little about you</h2>
+              <p class="apply-step-helper">
+                Take your time. This is just enough for us to reach you safely.
+              </p>
+
+              <div class="apply-field">
+                <label for="full_name">Full name</label>
+                <input
+                  type="text"
+                  id="full_name"
+                  name="full_name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="apply-field">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  required
+                />
+              </div>
+
+              <div class="apply-field">
+                <label for="phone">
+                  Phone number <span class="apply-optional">(optional)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                  inputmode="tel"
+                />
+              </div>
+
+              <div class="apply-field">
+                <label for="contact_preferences">
+                  Best way and best time to reach you
+                  <span class="apply-optional">(optional)</span>
+                </label>
+                <p class="apply-field-hint" id="contact_preferences_hint">
+                  If it's not safe for someone to contact you at certain times or in certain ways,
+                  let us know here.
+                </p>
+                <textarea
+                  id="contact_preferences"
+                  name="contact_preferences"
+                  rows="3"
+                  aria-describedby="contact_preferences_hint"
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Step 2 -->
+            <fieldset class="apply-step" data-step="2" id="apply-step-2" hidden>
+              <legend class="visually-hidden">Step 2: Needs Assessment Survey</legend>
+              <h2 class="apply-step-heading">What kind of support are you looking for?</h2>
+              <p class="apply-step-helper">
+                There's no wrong answer here, and nothing you select commits you to anything. Choose
+                as many or as few as feel right.
+              </p>
+
+              <div class="apply-checkbox-group" role="group" aria-label="Support areas">
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Employment" />
+                  <span>Employment</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Education" />
+                  <span>Education</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Emotional Support" />
+                  <span>Emotional Support</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Family Recovery" />
+                  <span>Family Recovery</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Addiction Recovery" />
+                  <span>Addiction Recovery</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Financial Guidance" />
+                  <span>Financial Guidance</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Housing" />
+                  <span>Housing</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Trauma Recovery" />
+                  <span>Trauma Recovery</span>
+                </label>
+                <label class="apply-checkbox">
+                  <input type="checkbox" name="needs" value="Other" id="needs-other-toggle" />
+                  <span>Other</span>
+                </label>
+              </div>
+
+              <div class="apply-field apply-needs-other" id="needs-other-wrap" hidden>
+                <label for="needs_other">Write your own</label>
+                <input
+                  type="text"
+                  id="needs_other"
+                  name="needs_other"
+                  placeholder="Describe what you're looking for"
+                />
+              </div>
+            </fieldset>
+
+            <!-- Step 3 -->
+            <fieldset class="apply-step" data-step="3" id="apply-step-3" hidden>
+              <legend class="visually-hidden">Step 3: Narrative Questions</legend>
+              <h2 class="apply-step-heading">In your own words</h2>
+              <p class="apply-step-helper">
+                Write as much or as little as feels right - there's no format to follow.
+              </p>
+
+              <div class="apply-field">
+                <label for="current_situation">What's going on for you at the moment?</label>
+                <textarea
+                  id="current_situation"
+                  name="current_situation"
+                  rows="6"
+                  placeholder="Optional - no minimum length"
+                ></textarea>
+              </div>
+
+              <div class="apply-field">
+                <label for="support_requested">What kind of support are you hoping for?</label>
+                <textarea
+                  id="support_requested"
+                  name="support_requested"
+                  rows="6"
+                  placeholder="Optional - no minimum length"
+                ></textarea>
+              </div>
+
+              <div class="apply-field">
+                <label for="goals">What would things look like if this went well?</label>
+                <textarea
+                  id="goals"
+                  name="goals"
+                  rows="6"
+                  placeholder="Optional - no minimum length"
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Step 4 -->
+            <fieldset class="apply-step" data-step="4" id="apply-step-4" hidden>
+              <legend class="visually-hidden">Step 4: Consent</legend>
+              <h2 class="apply-step-heading">Before you send this</h2>
+              <p class="apply-step-helper">Here's exactly what happens to what you've shared:</p>
+
+              <ul class="apply-consent-list">
+                <li>Seen only by our support team, never shared elsewhere without asking you first</li>
+                <li>Used to understand your situation and connect you with the right resources</li>
+                <li>Deletable at any time, just ask</li>
+              </ul>
+
+              <label class="apply-consent-checkbox">
+                <input type="checkbox" id="consent" name="consent" value="yes" />
+                <span
+                  >I understand how my information will be used, and I'm happy to submit this
+                  application.</span
+                >
+              </label>
+            </fieldset>
+
+            <div class="apply-nav">
+              <button type="button" class="btn btn-outline-dark apply-back" id="apply-back" hidden>
+                Back
+              </button>
+              <button type="button" class="btn btn-teal apply-next" id="apply-next">
+                Continue
+              </button>
+              <button type="button" class="btn btn-gold apply-submit" id="apply-submit" hidden>
+                Send my application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
-    <footer class="site-footer"><div class="container footer-bottom"><p>© 2026 Open Space Support. All rights reserved.</p></div></footer>
-    <aside class="quick-exit" aria-label="Quick exit">Need to leave this page quickly? <a href="https://www.google.co.uk" rel="noopener noreferrer">Exit now</a></aside>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-logo">Open Space Support</p>
+          <p class="footer-note">
+            Practical support for people rebuilding after leaving a high-control group.
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Explore</p>
+          <a href="about.html">About Us</a>
+          <a href="our-mission.html">Our Mission</a>
+          <a href="resources.html">Resources</a>
+          <a href="apply.html">Apply for Support</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <p class="footer-heading">Legal</p>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="cookies.html">Cookie Policy</a>
+        </div>
+        <div>
+          <p class="footer-heading">Crisis support</p>
+          <p class="footer-crisis">
+            If you're in crisis or need immediate support, Samaritans are available 24/7 on
+            <strong>116 123</strong> (UK, free). Open Space Support provides practical resources but
+            isn't a crisis service.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Open Space Support. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <aside class="quick-exit quick-exit-apply" aria-label="Quick exit">
+      Need to leave this page quickly?
+      <a href="https://www.google.co.uk" rel="noopener noreferrer">Exit now</a>
+    </aside>
+
+    <script src="js/supabase-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/main.js"></script>
+    <script src="js/apply.js?v=5"></script>
   </body>
 </html>

@@ -25,6 +25,14 @@ website/
 └── README.md
 ```
 
+## Support Application Portal (`/apply`)
+
+1. In [Supabase](https://supabase.com), create a project and run `supabase/schema.sql` in the SQL Editor.
+2. Copy your project URL and anon key into `js/supabase-config.js`.
+3. Assign `app_metadata.role = 'admin'` on staff accounts that need to read submissions.
+
+Applications auto-save to `localStorage` as drafts. Submissions require consent and are never added to marketing lists.
+
 ## Customize
 
 - Update copy and sections in `index.html`

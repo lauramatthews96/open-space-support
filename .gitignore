@@ -2,3 +2,7 @@
 *.log
 .env
 .env.*
+assets/
+
+# Local Supabase keys — use supabase-config.example.js as a template
+js/supabase-config.js
