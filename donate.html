@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Support Open Space Support with a one-off or monthly donation. Every gift helps keep practical resources free for people leaving high-control groups."
+    />
+    <title>Donate - Open Space Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Karla:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=140" />
+    <link rel="stylesheet" href="css/contact.css?v=1" />
+    <link rel="stylesheet" href="css/donate.css?v=5" />
+  </head>
+  <body class="donate-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Open Space Support</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Main"></nav>
+        <a class="btn btn-gold header-cta" href="apply.html">Apply for Support</a>
+      </div>
+    </header>
+
+    <main id="main" class="donate-main">
+      <div class="container donate-container">
+        <div class="donate-intro">
+          <h1>Help keep this free.</h1>
+          <p>
+            Open Space Support is run by volunteers. Donations go toward keeping the resources
+            online, adding new guidance, and offering one-to-one support to people who ask for it.
+          </p>
+          <p>
+            We are not a registered charity yet, so we cannot claim Gift Aid. There is no account to
+            create, and we will never publish your name.
+          </p>
+        </div>
+
+        <div class="donate-panel newsletter-box">
+          <div class="newsletter-box-body">
+            <h2 id="donate-form-heading">Make a donation</h2>
+            <p class="newsletter-body">
+              Choose an amount. You'll be taken to a secure payment page to finish.
+            </p>
+
+            <form class="donate-form" id="donate-form" aria-labelledby="donate-form-heading">
+              <fieldset class="donate-freq">
+                <legend class="visually-hidden">How often</legend>
+                <label>
+                  <input type="radio" name="frequency" value="once" checked />
+                  <span>One-off</span>
+                </label>
+                <label>
+                  <input type="radio" name="frequency" value="monthly" />
+                  <span>Monthly</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="donate-amounts">
+                <legend class="visually-hidden">Amount in pounds</legend>
+                <label>
+                  <input type="radio" name="amount" value="10" />
+                  <span>£10</span>
+                </label>
+                <label>
+                  <input type="radio" name="amount" value="25" checked />
+                  <span>£25</span>
+                </label>
+                <label>
+                  <input type="radio" name="amount" value="50" />
+                  <span>£50</span>
+                </label>
+                <label>
+                  <input type="radio" name="amount" value="100" />
+                  <span>£100</span>
+                </label>
+              </fieldset>
+
+              <button class="donate-own" type="button" id="donate-own">
+                Choose my own amount <span aria-hidden="true">→</span>
+              </button>
+
+              <button class="btn btn-gold donate-submit" type="submit" id="donate-submit">
+                Donate £25
+              </button>
+              <p class="donate-note">
+                Payments are processed securely by Stripe. We never see your card details. Donations
+                are gifts, not a purchase, and we are not a registered charity, so we cannot claim
+                Gift Aid. See our
+                <a href="privacy.html">Privacy Policy</a>
+                and
+                <a href="terms.html">Terms of Use</a>
+                for how donations work.
+              </p>
+              <p class="donate-status" id="donate-status" role="status" hidden></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-logo">Open Space Support</p>
+          <p class="footer-note">
+            Practical support for people rebuilding after leaving a high-control group.
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Explore</p>
+          <a href="about.html">About Us</a>
+          <a href="our-mission.html">Our Mission</a>
+          <a href="resources.html">Resources</a>
+          <a href="apply.html">Apply for Support</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <p class="footer-heading">Legal</p>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="cookies.html">Cookie Policy</a>
+        </div>
+        <div>
+          <p class="footer-heading">Crisis support</p>
+          <p class="footer-crisis">
+            If you're in crisis or need immediate support, Samaritans are available 24/7 on
+            <strong>116 123</strong> (UK, free). Open Space Support provides practical resources but
+            isn't a crisis service.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Open Space Support. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <aside class="quick-exit" aria-label="Quick exit">
+      Need to leave this page quickly?
+      <a href="https://www.google.co.uk" rel="noopener noreferrer">Exit now</a>
+    </aside>
+
+    <script src="js/resources-data.js?v=9"></script>
+    <script src="js/site-nav.js?v=4"></script>
+    <script src="js/main.js?v=3"></script>
+    <script>
+      window.DONATE_CONFIG = {
+        once: "https://buy.stripe.com/6oUcN41DV56N9lfdBQb3q0y",
+        monthly: "https://buy.stripe.com/6oUcN41DV56N9lfdBQb3q0y",
+        customOnce: "https://buy.stripe.com/28E00i4Q72YFfJDcxMb3q0z",
+        customMonthly: "https://buy.stripe.com/28E00i4Q72YFfJDcxMb3q0z",
+      };
+    </script>
+    <script src="js/donate.js?v=6"></script>
+  </body>
+</html>

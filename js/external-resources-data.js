@@ -48,6 +48,20 @@ window.EXTERNAL_RESOURCE_SECTIONS = {
     subhead:
       "Free ways to build confidence, connection, and a genuinely wider sense of what's possible.",
   },
+  "lgbtq-support": {
+    heading: "External Resources for LGBTQ+ Support",
+    subhead:
+      "Support specifically for LGBTQ+ people navigating faith, family rejection, and identity.",
+  },
+  "for-teenagers": {
+    heading: "External Resources for Teenagers",
+    subhead: "Free, confidential support built specifically for young people.",
+  },
+  housing: {
+    heading: "External Resources for Housing",
+    subhead:
+      "Free, expert advice on renting, your rights as a tenant, and what to do if your housing situation becomes unsafe.",
+  },
 };
 
 window.EXTERNAL_RESOURCES = [
@@ -67,7 +81,7 @@ window.EXTERNAL_RESOURCES = [
       "A UK charity supporting people affected by coercive and cultic groups, with a dedicated resources hub covering safe exit planning, support organisations, and emergency housing options.",
     url: "https://thefamilysurvivaltrust.org/",
     logo: "images/external/family-survival-trust.png",
-    categorySlugs: ["leaving-safely"],
+    categorySlugs: ["leaving-safely", "housing"],
   },
   {
     slug: "olive-leaf-network",
@@ -79,6 +93,28 @@ window.EXTERNAL_RESOURCES = [
     categorySlugs: ["leaving-safely"],
   },
   {
+    slug: "flaxenwick",
+    name: "Flaxenwick",
+    description:
+      "A free 16-lesson video course on healing and rebuilding after leaving the Jehovah's Witnesses, with a downloadable worksheet for each lesson. Starts with immediate needs, health, and building a support network, then works through boundaries, purpose, and triggers.",
+    url: "https://flaxenwick.org/",
+    urlNote:
+      "Built on life-coaching principles - the course states it isn't a substitute for professional mental health support.",
+    logo: "images/external/flaxenwick.png",
+    categorySlugs: ["leaving-safely", "emotional-wellbeing"],
+  },
+  {
+    slug: "xjw-friends",
+    name: "XJW Friends",
+    description:
+      "A UK group of ex-Jehovah's Witnesses running social meetups in London and the Midlands since 2007, with associated groups in York and Edinburgh. Faith-neutral, with one rule: no preaching, in either direction.",
+    url: "https://www.meetup.com/xjwfriends/",
+    urlNote:
+      "The Meetup group is private and venues are shown to members only. Their older website is no longer maintained.",
+    logo: "images/external/xjw-friends.png",
+    categorySlugs: ["leaving-safely", "recovery-from-shunning"],
+  },
+  {
     slug: "shelter",
     name: "Shelter",
     description:
@@ -87,7 +123,7 @@ window.EXTERNAL_RESOURCES = [
     urlNote:
       "Scotland: scotland.shelter.org.uk · Wales: sheltercymru.org.uk · Northern Ireland: housingadviceni.org",
     logo: "images/external/shelter.png",
-    categorySlugs: ["leaving-safely"],
+    categorySlugs: ["leaving-safely", "housing"],
   },
   {
     slug: "hope-valley-counselling",
@@ -149,7 +185,7 @@ window.EXTERNAL_RESOURCES = [
     description:
       "Not a charity, but a widely trusted, genuinely free resource for comparing bills, understanding financial products, and navigating things like credit and budgeting without jargon. A good first stop for general financial literacy, alongside the debt-specific charities above.",
     url: "https://www.moneysavingexpert.com/",
-    logo: "images/external/moneysavingexpert.png",
+    logo: "images/external/moneysavingexpert.png?v=2",
     categorySlugs: ["financial-stability"],
   },
   {
@@ -187,7 +223,7 @@ window.EXTERNAL_RESOURCES = [
     url: "https://roomforwork.org/",
     urlNote:
       "Courses are delivered in-person in Richmond and other southwest London locations - mainly useful if you're in or near London, not a nationwide option.",
-    logo: "images/external/room-for-work.png",
+    logo: "images/external/room-for-work.png?v=2",
     categorySlugs: ["career-employment"],
   },
   {
@@ -228,11 +264,11 @@ window.EXTERNAL_RESOURCES = [
   },
   {
     slug: "family-lives",
-    name: "Family Lives",
+    name: "Coram Family Lives",
     description:
       "Offers help and information to over 85,000 parents and families each year, covering a broad range of family relationship difficulties, including a helpline for more general parenting and family support beyond formal mediation.",
-    url: "https://www.familylives.org.uk/",
-    logo: "images/external/family-lives.png",
+    url: "https://www.coramfamilylives.org.uk/",
+    logo: "images/external/family-lives.png?v=2",
     categorySlugs: ["family-relationships"],
   },
   {
@@ -378,6 +414,80 @@ window.EXTERNAL_RESOURCES = [
     url: "https://doit.life/",
     logo: "images/external/doit.png",
     categorySlugs: ["personal-growth"],
+  },
+  {
+    slug: "switchboard-lgbt",
+    name: "Switchboard LGBT+",
+    description:
+      "The UK's free LGBTQIA+ support line, with every call, message, or email answered by a volunteer from the LGBTQIA+ community. Open every day from 10am to 10pm, and able to discuss anything related to sexuality and gender identity, a strong first stop whatever you need to talk through.",
+    url: "https://switchboard.lgbt/",
+    urlNote: "0800 0119 100",
+    logo: "images/external/switchboard.png",
+    categorySlugs: ["lgbtq-support"],
+  },
+  {
+    slug: "naz-and-matt-foundation",
+    name: "Naz and Matt Foundation",
+    description:
+      "A UK charity that empowers and supports LGBTQI+ individuals, and their friends and family, to work through challenges linked to sexuality or gender identity where religion is heavily involved, founded specifically after a young man took his own life following his religious family's rejection. They provide trauma-informed support to both LGBTQI individuals and parents from religious or culturally conservative backgrounds, making them genuinely relevant to the exact intersection this category covers.",
+    url: "https://www.nazandmattfoundation.org/",
+    logo: "images/external/naz-and-matt-foundation.png",
+    categorySlugs: ["lgbtq-support"],
+  },
+  {
+    slug: "mind-lgbtq",
+    name: "Mind",
+    description:
+      "The UK mental health charity's helplines offer information and support by phone and email, with local Minds providing face-to-face services including talking therapies and peer support. Relevant here given how often religious rejection of LGBTQ+ identity affects mental health directly.",
+    url: "https://www.mind.org.uk/",
+    logo: "images/external/mind.png",
+    categorySlugs: ["lgbtq-support"],
+  },
+  {
+    slug: "hope-valley-counselling-lgbtq",
+    name: "Hope Valley Counselling",
+    description:
+      "UK-based accredited psychotherapist Dr Gillie Jenkinson, specialising in counselling for coercive, cultic, and spiritual abuse, useful if you're looking for therapy that understands the religious trauma side of this specifically, alongside LGBTQ+-affirming support elsewhere.",
+    url: "https://www.hopevalleycounselling.com/",
+    logo: "images/external/hope-valley-counselling.png",
+    categorySlugs: ["lgbtq-support"],
+  },
+  {
+    slug: "childline",
+    name: "Childline",
+    description:
+      "A free, private, and confidential service for anyone under 19 in the UK, available to talk about any worry, any time, day or night, whatever it's about. Also offers a free 1-2-1 counsellor chat and email support service.",
+    url: "https://www.childline.org.uk/",
+    urlNote: "0800 1111",
+    logo: "images/external/childline.png",
+    categorySlugs: ["for-teenagers"],
+  },
+  {
+    slug: "youngminds",
+    name: "YoungMinds",
+    description:
+      "The UK's leading charity for children and young people's mental health, working toward a world where no young person feels alone with their mental health. Offers guides and advice covering topics like coping with life and getting urgent help, useful for the wider emotional weight that can come with questioning everything you were raised with.",
+    url: "https://www.youngminds.org.uk/",
+    logo: "images/external/youngminds.png",
+    categorySlugs: ["for-teenagers"],
+  },
+  {
+    slug: "kooth",
+    name: "Kooth",
+    description:
+      "A free, anonymous online counselling and community service for young people, useful for teenagers who aren't ready to talk on the phone yet and would rather start somewhere more private and low-pressure.",
+    url: "https://www.kooth.com/",
+    logo: "images/external/kooth.png",
+    categorySlugs: ["for-teenagers"],
+  },
+  {
+    slug: "the-mix",
+    name: "The Mix",
+    description:
+      "Support and advice for people under 25, a good option for older teenagers who might be starting to feel like Childline's under-19 framing doesn't quite fit them anymore, or who want a slightly older-skewing space.",
+    url: "https://www.themix.org.uk/",
+    logo: "images/external/the-mix.png",
+    categorySlugs: ["for-teenagers"],
   },
 ];
 

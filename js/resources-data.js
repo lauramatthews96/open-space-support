@@ -37,6 +37,14 @@ window.RESOURCE_CATEGORIES = [
     imageClass: "resource-img-financial",
   },
   {
+    slug: "housing",
+    label: "Housing",
+    short: "Somewhere of your own",
+    description:
+      "Renting, deposits, contracts, and knowing your rights - for anyone sorting out housing without family backing.",
+    imageClass: "resource-img-housing",
+  },
+  {
     slug: "family-relationships",
     label: "Family & Relationships",
     short: "When family feels far away",
@@ -75,6 +83,22 @@ window.RESOURCE_CATEGORIES = [
     description:
       "Identity, values, and building a life that's actually yours.",
     imageClass: "resource-img-growth",
+  },
+  {
+    slug: "lgbtq-support",
+    label: "LGBTQ+ Support",
+    short: "Identity, community, and belonging",
+    description:
+      "Support for understanding who you are, finding community, and rebuilding after high-control teaching on sexuality and gender.",
+    imageClass: "resource-img-lgbtq",
+  },
+  {
+    slug: "for-teenagers",
+    label: "For Teenagers",
+    short: "If you're still at home",
+    description:
+      "Written for young people growing up in a high-control group - your questions, your options, and where to get help.",
+    imageClass: "resource-img-teenagers",
   },
 ];
 
@@ -172,6 +196,23 @@ window.RESOURCE_ARTICLES = [
     heroImage: "images/family-parents-aging.jpg",
     heroAlt: "An empty armchair by a window in soft afternoon light",
     hasSafetyNote: false,
+  },
+  {
+    slug: "supporting-a-teenager-whos-questioning-their-faith",
+    path: "resources/family-relationships/supporting-a-teenager-whos-questioning-their-faith.html",
+    title: "Supporting a teenager who's questioning their faith",
+    category: "Family & Relationships",
+    categorySlug: "family-relationships",
+    alsoInCategorySlugs: ["for-teenagers"],
+    readTime: "7 min read",
+    updated: "August 2026",
+    excerpt:
+      "For parents: how to protect the relationship, listen well, and know when your teenager's wellbeing needs to come first.",
+    thumbClass: "latest-thumb-34",
+    heroImage: "images/family-supporting-teenager.jpg",
+    heroAlt:
+      "Two mugs of tea across from each other on a kitchen table in warm evening light - space for a conversation",
+    hasSafetyNote: true,
   },
   {
     slug: "why-addiction-shows-up-so-often-after-leaving",
@@ -510,6 +551,118 @@ window.RESOURCE_ARTICLES = [
       "A chair by a window with an open notebook on a side table - quiet space for honest reflection",
     hasSafetyNote: true,
   },
+  {
+    slug: "leaving-when-youre-also-coming-out",
+    path: "resources/lgbtq-support/leaving-when-youre-also-coming-out.html",
+    title: "Leaving when you're also coming out",
+    category: "LGBTQ+ Support",
+    categorySlug: "lgbtq-support",
+    readTime: "7 min read",
+    updated: "August 2026",
+    excerpt:
+      "When leaving a high-control group and coming out happen together - why it's its own kind of hard, and what helps.",
+    thumbClass: "latest-thumb-29",
+    heroImage: "images/lgbtq-leaving-coming-out.jpg",
+    heroAlt:
+      "An open front door with soft morning light and a coat on the hook - a quiet threshold between leaving and beginning again",
+    hasSafetyNote: true,
+  },
+  {
+    slug: "unlearning-shame-that-was-taught-as-fact",
+    path: "resources/lgbtq-support/unlearning-shame-that-was-taught-as-fact.html",
+    title: "Unlearning shame that was taught as fact",
+    category: "LGBTQ+ Support",
+    categorySlug: "lgbtq-support",
+    readTime: "6 min read",
+    updated: "August 2026",
+    excerpt:
+      "When shame about your identity was taught as religious fact - why it's different from ordinary self-doubt, and what actually helps.",
+    thumbClass: "latest-thumb-31",
+    heroImage: "images/lgbtq-unlearning-shame.jpg",
+    heroAlt:
+      "Rain on a window beside a mug of tea and sage bedding - a quiet moment for reflection and unlearning",
+    hasSafetyNote: true,
+  },
+  {
+    slug: "finding-lgbtq-community-when-you-missed-out-on-it-growing-up",
+    path: "resources/lgbtq-support/finding-lgbtq-community-when-you-missed-out-on-it-growing-up.html",
+    title: "Finding LGBTQ+ community when you missed out on it growing up",
+    category: "LGBTQ+ Support",
+    categorySlug: "lgbtq-support",
+    readTime: "6 min read",
+    updated: "August 2026",
+    excerpt:
+      "Practical first steps for building LGBTQ+ community as an adult, when you missed the gradual build-up most people get growing up.",
+    thumbClass: "latest-thumb-30",
+    heroImage: "images/lgbtq-finding-community.jpg",
+    heroAlt:
+      "A group of friends laughing together outdoors - finding community and belonging",
+    hasSafetyNote: true,
+  },
+  {
+    slug: "having-doubts-about-what-youve-been-taught",
+    path: "resources/for-teenagers/having-doubts-about-what-youve-been-taught.html",
+    title: "Having doubts about what you've been taught? You're not alone",
+    category: "For Teenagers",
+    categorySlug: "for-teenagers",
+    readTime: "5 min read",
+    updated: "August 2026",
+    excerpt:
+      "Questioning what you grew up with is a normal part of growing up - and you don't have to decide anything right now.",
+    thumbClass: "latest-thumb-32",
+    heroImage: "images/teenagers-having-doubts.jpg",
+    heroAlt:
+      "A quiet bedroom window seat with an open notebook and soft afternoon light - a private space to think",
+    hasSafetyNote: true,
+  },
+  {
+    slug: "you-dont-have-to-have-it-all-figured-out-yet",
+    path: "resources/for-teenagers/you-dont-have-to-have-it-all-figured-out-yet.html",
+    title: "You don't have to have it all figured out yet",
+    category: "For Teenagers",
+    categorySlug: "for-teenagers",
+    readTime: "5 min read",
+    updated: "August 2026",
+    excerpt:
+      "There's no rush to decide what you believe - why uncertainty is okay, and why your safety comes first while you work it out.",
+    thumbClass: "latest-thumb-33",
+    heroImage: "images/teenagers-figured-out.jpg",
+    heroAlt:
+      "A quiet back doorstep in soft evening light with a mug of tea and a garden beyond - a private spot to sit and think",
+    hasSafetyNote: true,
+  },
+  {
+    slug: "renting-for-the-first-time-deposits-contracts-and-what-to-watch-for",
+    path: "resources/housing/renting-for-the-first-time-deposits-contracts-and-what-to-watch-for.html",
+    title: "Renting for the first time: deposits, contracts, and what to watch for",
+    category: "Housing",
+    categorySlug: "housing",
+    readTime: "6 min read",
+    updated: "August 2026",
+    excerpt:
+      "Deposits, tenancy agreements, banned fees, and the red flags worth knowing about before you sign anything.",
+    thumbClass: "latest-thumb-35",
+    heroImage: "images/housing-renting-first-time.jpg",
+    heroAlt:
+      "A set of keys and a tenancy agreement on a kitchen table in a bright, nearly empty flat",
+    hasSafetyNote: true,
+  },
+  {
+    slug: "what-to-do-if-youre-at-risk-of-homelessness",
+    path: "resources/housing/what-to-do-if-youre-at-risk-of-homelessness.html",
+    title: "What to do if you're at risk of homelessness",
+    category: "Housing",
+    categorySlug: "housing",
+    readTime: "6 min read",
+    updated: "August 2026",
+    excerpt:
+      "Your legal right to help from the council, who to contact first, and why reaching out early widens your options.",
+    thumbClass: "latest-thumb-36",
+    heroImage: "images/housing-risk-of-homelessness.jpg",
+    heroAlt:
+      "A phone, an open notebook and a mug of tea on a table by a sunlit window - getting ready to make the call",
+    hasSafetyNote: true,
+  },
 ];
 
 /**
@@ -529,6 +682,23 @@ window.getResourceCategory = function getResourceCategory(slug) {
   return window.RESOURCE_CATEGORIES.find(function (cat) {
     return cat.slug === slug;
   });
+};
+
+/**
+ * An article belongs to its own category plus any listed in `alsoInCategorySlugs`,
+ * so cross-audience pieces can appear under more than one topic.
+ *
+ * @param {{ categorySlug: string, alsoInCategorySlugs?: string[] }} article
+ * @param {string} categorySlug
+ * @returns {boolean}
+ */
+window.resourceArticleInCategory = function resourceArticleInCategory(
+  article,
+  categorySlug
+) {
+  if (article.categorySlug === categorySlug) return true;
+  var also = article.alsoInCategorySlugs || [];
+  return also.indexOf(categorySlug) !== -1;
 };
 
 /**
@@ -568,6 +738,7 @@ window.escapeHtml = function escapeHtml(str) {
  * @property {string} title
  * @property {string} category
  * @property {string} categorySlug
+ * @property {string[]} [alsoInCategorySlugs]
  * @property {string} readTime
  * @property {string} updated
  * @property {string} excerpt

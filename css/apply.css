@@ -371,6 +371,12 @@
   margin-bottom: 0;
 }
 
+.apply-consent-checkbox a {
+  color: var(--teal-deep);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
 .apply-consent-checkbox:has(input:focus-visible) {
   outline: 2px solid var(--teal-deep);
   outline-offset: 2px;

@@ -28,7 +28,7 @@ Filter URLs use query params, e.g. `resources.html?category=leaving-safely`. Leg
 </aside>
 ```
 
-5. External resources for Leaving Safely, Emotional Wellbeing, Financial Stability, Career & Employment, Family & Relationships, Addiction & Family Recovery, Recovery from Shunning, Education & Training, and Personal Growth live on `resources.html` when that category is selected, and on individual article pages via the block in `resources/partials/external-resources.html`. Data and section copy live in `js/external-resources-data.js`; rendering in `js/resources-external.js` and `js/external-resources.js`.
+5. External resources for Leaving Safely, Emotional Wellbeing, Financial Stability, Career & Employment, Housing, Family & Relationships, Addiction & Family Recovery, Recovery from Shunning, Education & Training, Personal Growth, LGBTQ+ Support, and For Teenagers live on `resources.html` when that category is selected, and on individual article pages via the block in `resources/partials/external-resources.html`. Data and section copy live in `js/external-resources-data.js`; rendering in `js/resources-external.js` and `js/external-resources.js`.
 
 6. Update related article cards (same category first, then adjacent).
 7. Add entry to `js/resources-data.js`.
@@ -44,6 +44,7 @@ Filter URLs use query params, e.g. `resources.html?category=leaving-safely`. Leg
 | talking-to-your-children-about-why-things-have-changed | family-relationships | no |
 | co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore | family-relationships | no |
 | when-your-parents-are-still-in-and-getting-older | family-relationships | no |
+| supporting-a-teenager-whos-questioning-their-faith | family-relationships | yes |
 | why-addiction-shows-up-so-often-after-leaving | addiction-family-recovery | yes |
 | recognising-the-signs-in-yourself-or-someone-you-love | addiction-family-recovery | yes |
 | healthy-coping-strategies-to-replace-whats-not-working | addiction-family-recovery | yes |
@@ -56,6 +57,11 @@ Filter URLs use query params, e.g. `resources.html?category=leaving-safely`. Leg
 | discovering-what-you-actually-enjoy | personal-growth | no |
 | setting-goals-when-youve-never-been-allowed-to-want-things-for-yourself | personal-growth | no |
 | celebrating-how-far-youve-come | personal-growth | no |
+| leaving-when-youre-also-coming-out | lgbtq-support | yes |
+| unlearning-shame-that-was-taught-as-fact | lgbtq-support | yes |
+| finding-lgbtq-community-when-you-missed-out-on-it-growing-up | lgbtq-support | yes |
+| having-doubts-about-what-youve-been-taught | for-teenagers | yes |
+| you-dont-have-to-have-it-all-figured-out-yet | for-teenagers | yes |
 | opening-bank-account | financial-stability | no |
 | budgeting-when-youre-starting-from-zero | financial-stability | no |
 | when-money-was-never-really-yours-to-control | financial-stability | no |
@@ -66,3 +72,5 @@ Filter URLs use query params, e.g. `resources.html?category=leaving-safely`. Leg
 | planning-your-exit | leaving-safely | yes |
 | first-48-hours-after-leaving | leaving-safely | yes |
 | how-do-you-know-if-youre-ready-to-leave | leaving-safely | yes |
+| renting-for-the-first-time-deposits-contracts-and-what-to-watch-for | housing | yes |
+| what-to-do-if-youre-at-risk-of-homelessness | housing | yes |

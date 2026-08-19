@@ -7,6 +7,7 @@
   var gridEl = document.getElementById("resources-grid");
   var emptyEl = document.getElementById("resources-empty");
   var externalEl = document.getElementById("resources-external");
+  var externalJumpEl = document.getElementById("resources-external-jump");
   var indexSection = document.getElementById("resources-index");
   var prelaunchEl = document.getElementById("resources-prelaunch");
 
@@ -52,9 +53,20 @@
 
   function filterArticles(categorySlug) {
     if (!categorySlug) return published.slice();
-    return published.filter(function (article) {
-      return article.categorySlug === categorySlug;
+
+    var own = [];
+    var crossListed = [];
+
+    published.forEach(function (article) {
+      if (article.categorySlug === categorySlug) {
+        own.push(article);
+      } else if (window.resourceArticleInCategory(article, categorySlug)) {
+        crossListed.push(article);
+      }
     });
+
+    // Articles written for this category read first; borrowed ones follow.
+    return own.concat(crossListed);
   }
 
   function getCategoryLabel(slug) {
@@ -63,12 +75,14 @@
   }
 
   function updateCountText(categorySlug, total) {
+    var noun = total === 1 ? " resource" : " resources";
+
     if (!categorySlug) {
-      countEl.textContent = "Showing all " + total + " resources";
+      countEl.textContent = "Showing all " + total + noun;
       return;
     }
     countEl.textContent =
-      "Showing " + total + " resources in " + getCategoryLabel(categorySlug);
+      "Showing " + total + noun + " in " + getCategoryLabel(categorySlug);
   }
 
   function renderArticleCard(article) {
@@ -122,10 +136,30 @@
     });
   }
 
+  function updateExternalJumpLink(categorySlug) {
+    if (!externalJumpEl) return;
+
+    var resources = categorySlug
+      ? window.getExternalResourcesForCategory(categorySlug)
+      : [];
+
+    if (categorySlug && resources.length > 0) {
+      externalJumpEl.hidden = false;
+      externalJumpEl.innerHTML =
+        '<a href="#resources-external">View external resources for ' +
+        window.escapeHtml(getCategoryLabel(categorySlug)) +
+        " ↓</a>";
+    } else {
+      externalJumpEl.hidden = true;
+      externalJumpEl.innerHTML = "";
+    }
+  }
+
   function updateExternalResources(categorySlug) {
     if (window.renderResourcesExternalSection) {
       window.renderResourcesExternalSection(categorySlug);
     }
+    updateExternalJumpLink(categorySlug);
     scrollToExternalResourcesIfNeeded();
   }
 

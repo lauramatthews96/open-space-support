@@ -29,6 +29,14 @@
   text-underline-offset: 2px;
 }
 
+button.resources-intro-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
 .resources-intro-link:hover {
   color: var(--gold-dark);
 }
@@ -41,6 +49,12 @@
 
 .resources-external-wrap:not([hidden]) {
   display: block;
+}
+
+.external-resources-page .resources-external-wrap {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .resources-external-wrap .external-resources {
@@ -137,7 +151,22 @@
 .resources-count {
   font-size: 0.9rem;
   color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.resources-external-jump {
   margin: 0 0 1.75rem;
+}
+
+.resources-external-jump a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--teal-deep);
+  text-decoration: none;
+}
+
+.resources-external-jump a:hover {
+  text-decoration: underline;
 }
 
 .resources-article-grid {

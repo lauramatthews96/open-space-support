@@ -1,0 +1,236 @@
+/* Results page built from the pathways survey */
+
+.pathways-results-intro {
+  padding: 0 0 1.5rem;
+}
+
+.pathways-results-pills-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.pathways-results-pills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.pathways-results-pills li {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--teal-deep);
+  background: var(--white);
+  border: 1px solid rgba(27, 75, 74, 0.14);
+  border-radius: 999px;
+}
+
+.pathways-results-notes {
+  margin-top: 1.25rem;
+}
+
+.pathways-results-notes .pathways-note {
+  margin-bottom: 0.65rem;
+}
+
+.pathways-results-body {
+  padding: 0 0 4rem;
+  background: var(--grey-warm);
+}
+
+.pathways-results-group {
+  padding-top: 2.25rem;
+}
+
+.pathways-results-group h2,
+.pathways-results-actions h2,
+.pathways-results-externals h2,
+.pathways-results-reading h2 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--teal-deep);
+  margin: 0 0 1rem;
+}
+
+.pathways-results-why {
+  margin: 0.35rem 0 0.65rem;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--gold-dark);
+  line-height: 1.45;
+}
+
+.pathways-results-cta {
+  margin-top: 2.75rem;
+  padding: 2.25rem 1.5rem;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(139, 168, 136, 0.42) 0%,
+      rgba(168, 197, 214, 0.48) 100%
+    );
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pathways-results-cta-inner {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.pathways-results-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--teal-deep);
+  margin: 0 0 0.75rem;
+}
+
+.pathways-results-cta p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 1.35rem;
+}
+
+.pathways-results-cta .btn {
+  min-width: 12rem;
+}
+
+.pathways-results-actions,
+.pathways-results-externals,
+.pathways-results-reading {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(27, 75, 74, 0.12);
+}
+
+.pathways-results-reading-lead {
+  margin: 0 0 1.25rem;
+  max-width: 40rem;
+}
+
+.pathways-results-reading-lead a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.pathways-reading-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.pathways-reading-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 1.1rem;
+  padding: 1.15rem 1.2rem;
+  background: var(--white);
+  border: 1px solid rgba(27, 75, 74, 0.12);
+  border-radius: 10px;
+}
+
+.pathways-reading-cover {
+  width: 96px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+  background: rgba(27, 75, 74, 0.06);
+}
+
+.pathways-reading-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--teal-deep);
+  margin: 0 0 0.2rem;
+}
+
+.pathways-reading-author {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pathways-reading-body p {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+}
+
+.pathways-reading-body .btn {
+  min-height: 42px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.pathways-results-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.pathways-results-action {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  background: var(--white);
+  border: 1px solid rgba(27, 75, 74, 0.12);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.pathways-results-action:hover,
+.pathways-results-action:focus-visible {
+  border-color: var(--color-gold-muted);
+}
+
+.pathways-results-action-title {
+  font-weight: 600;
+  color: var(--teal-deep);
+}
+
+.pathways-results-retake {
+  margin: 2.5rem 0 0;
+  text-align: center;
+}
+
+.pathways-results-empty {
+  padding: 2rem 0 5rem;
+  background: var(--grey-warm);
+}
+
+.pathways-results-empty .container {
+  max-width: 36rem;
+  text-align: center;
+}
+
+.pathways-results-empty p {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 720px) {
+  .pathways-results-action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathways-reading-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .pathways-reading-cover {
+    width: 72px;
+  }
+}

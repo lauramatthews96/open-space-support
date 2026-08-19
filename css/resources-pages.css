@@ -1,0 +1,75 @@
+/* Shared layout for resource library sub-pages */
+
+.resources-page-main {
+  background: var(--grey-warm);
+}
+
+.resources-page-content {
+  padding: 0 0 4rem;
+}
+
+.resources-page-panel {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.75rem;
+  background: white;
+  border: 1.5px solid rgba(27, 75, 74, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 8px 28px rgba(27, 75, 74, 0.08);
+}
+
+.resources-page-panel h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--teal-deep);
+  margin: 2rem 0 0.75rem;
+}
+
+.resources-page-panel h2:first-child {
+  margin-top: 0;
+}
+
+.resources-page-panel p,
+.resources-page-panel li {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.resources-page-panel ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.resources-page-panel li + li {
+  margin-top: 0.35rem;
+}
+
+.resources-page-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.15rem;
+  background: rgba(139, 168, 136, 0.12);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.resources-page-note a {
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
+.resources-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .resources-page-panel {
+    padding: 2rem 1.25rem;
+  }
+}
