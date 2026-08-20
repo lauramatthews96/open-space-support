@@ -11,6 +11,7 @@
   var emptyEl = document.getElementById("pathways-empty");
   var resultsEl = document.getElementById("pathways-results");
   var readingEl = document.getElementById("pathways-reading");
+  var leadEl = document.getElementById("pathways-lead");
 
   if (!resultsEl || !emptyEl) return;
 
@@ -219,11 +220,10 @@
       });
     });
   }
+
+  function leadCopy(result) {
     if (result.capacity === "overwhelm") {
       return "Kept short on purpose. Two or three specific pages - not a tour of the whole site.";
-    }
-    if (result.start.length === 0 && result.actions.length) {
-      return "Based on what you ticked, the next step is to get in touch rather than read an article.";
     }
     return "Specific pages from what you ticked - not a dump of every category. Take what helps and ignore the rest.";
   }

@@ -5,6 +5,9 @@
   var nav = document.querySelector(".nav");
   if (!nav) return;
 
+  // Turn back on when Stripe is ready to take donations.
+  var SHOW_DONATE = false;
+
   var root =
     window.location.pathname.indexOf("/resources/") !== -1 ? "../../" : "";
 
@@ -88,12 +91,12 @@
     '<a href="' +
     href("contact.html") +
     '">Contact</a>' +
-    '<a class="nav-donate" href="' +
-    href("donate.html") +
-    '">Donate</a>';
+    (SHOW_DONATE
+      ? '<a class="nav-donate" href="' + href("donate.html") + '">Donate</a>'
+      : "");
 
   var applyCta = document.querySelector(".header-cta");
-  if (applyCta && !document.querySelector(".header-donate")) {
+  if (SHOW_DONATE && applyCta && !document.querySelector(".header-donate")) {
     var donateBtn = document.createElement("a");
     donateBtn.className = "btn btn-outline-dark header-donate";
     donateBtn.href = href("donate.html");
@@ -101,13 +104,15 @@
     applyCta.parentNode.insertBefore(donateBtn, applyCta);
   }
 
-  document.querySelectorAll(".footer-heading").forEach(function (heading) {
-    if (heading.textContent.trim() !== "Explore") return;
-    var col = heading.parentNode;
-    if (!col || col.querySelector('a[href$="donate.html"]')) return;
-    var donateLink = document.createElement("a");
-    donateLink.href = href("donate.html");
-    donateLink.textContent = "Donate";
-    col.appendChild(donateLink);
-  });
+  if (SHOW_DONATE) {
+    document.querySelectorAll(".footer-heading").forEach(function (heading) {
+      if (heading.textContent.trim() !== "Explore") return;
+      var col = heading.parentNode;
+      if (!col || col.querySelector('a[href$="donate.html"]')) return;
+      var donateLink = document.createElement("a");
+      donateLink.href = href("donate.html");
+      donateLink.textContent = "Donate";
+      col.appendChild(donateLink);
+    });
+  }
 })();

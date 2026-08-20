@@ -113,8 +113,7 @@
   }
 
   function showsCapacity() {
-    if (state.pathways.length === 0) return true;
-    return !(state.pathways.length === 1 && state.pathways[0] === "want-to-help");
+    return true;
   }
 
   function questionIndex() {
@@ -160,9 +159,9 @@
   function continueRow(enabled, extra) {
     return (
       '<div class="pathways-actions">' +
-      '<button type="button" class="btn btn-gold" data-pathways-action="next"' +
-      (enabled ? "" : " disabled") +
-      ">Continue</button>" +
+      '<button type="submit" class="btn btn-gold' +
+      (enabled ? "" : " is-idle") +
+      '">Continue</button>' +
       (extra || "") +
       "</div>"
     );
@@ -180,7 +179,7 @@
   function renderInvite() {
     els.title.textContent = "Would you like us to recommend some resources?";
     els.body.innerHTML =
-      "<p>Tick everything that applies and we'll build you a page of specific articles - not the whole library. Nothing is sent to us. It stays in this browser tab.</p>" +
+      "<p>A few short questions. We'll pick specific articles - not the whole library. Nothing is sent to us. It stays in this browser tab.</p>" +
       '<div class="pathways-actions">' +
       '<button type="button" class="btn btn-gold" data-pathways-action="start">Yes, take the survey</button>' +
       '<button type="button" class="btn btn-outline-dark" data-pathways-action="dismiss">No, just browsing thanks</button>' +
@@ -190,9 +189,10 @@
   function renderPathway() {
     els.title.textContent = "Where are you on your journey today?";
     var html =
-      '<p class="pathways-hint">You can tick more than one. Plenty of people are recently out <em>and</em> need practical help.</p>' +
+      '<form data-pathways-form="next">' +
+      '<p class="pathways-hint">Tick everything that applies.</p>' +
       '<div class="pathways-choices" role="group" aria-label="Where you are">';
-    (window.PATHWAY_CHOICES || []).forEach(function (item) {
+    (window.getResourcePathwayChoices ? window.getResourcePathwayChoices() : window.PATHWAY_CHOICES || []).forEach(function (item) {
       html += choiceButton(
         item.id,
         item.label,
@@ -200,7 +200,7 @@
         "data-pathways-pathway"
       );
     });
-    html += "</div>" + continueRow(state.pathways.length > 0);
+    html += "</div>" + continueRow(state.pathways.length > 0) + "</form>";
     els.body.innerHTML = html;
   }
 
@@ -208,7 +208,8 @@
     var topics = topicsForCurrent();
     els.title.textContent = "What's in the mix right now?";
     var html =
-      '<p class="pathways-hint">Tick everything that applies. The more specific you are, the more specific the page we build.</p>' +
+      '<form data-pathways-form="next">' +
+      '<p class="pathways-hint">Optional. Skip if none of these fit - you\'ll still get a starting set from the first question.</p>' +
       '<div class="pathways-choices" role="group" aria-label="What applies">';
     topics.forEach(function (item) {
       html += choiceButton(
@@ -224,6 +225,7 @@
         true,
         '<button type="button" class="pathways-text-btn" data-pathways-action="skip-topics">Skip this one</button>'
       ) +
+      "</form>" +
       backRow(true);
     els.body.innerHTML = html;
   }
@@ -255,7 +257,6 @@
     else if (state.screen === "topics") renderTopics();
     else renderCapacity();
     updateProgress();
-    els.title.focus();
   }
 
   function finish() {
@@ -302,6 +303,7 @@
     els.root.hidden = false;
     lockScroll(true);
     render();
+    els.title.focus();
   }
 
   function closeModal(status) {
@@ -405,6 +407,10 @@
     els.bar = wrap.querySelector(".pathways-bar");
     els.barFill = wrap.querySelector(".pathways-bar-fill");
     wrap.addEventListener("click", onClick);
+    wrap.addEventListener("submit", function (event) {
+      event.preventDefault();
+      goNext();
+    });
     document.addEventListener("keydown", onKeydown);
   }
 

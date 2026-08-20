@@ -7,176 +7,61 @@
   window.PATHWAYS_ANSWERS_KEY = "oss_pathways_answers_v1";
   window.PATHWAYS_PREF_KEY = "oss_pathways_v1";
 
+  // Every journey tick has published articles in PATHWAY_DEFAULTS.
+  // The second question is the same short list for everyone - no empty branches.
   window.PATHWAY_CHOICES = [
     { id: "thinking", label: "I'm thinking about leaving" },
     { id: "recently-left", label: "I've recently left" },
     { id: "shunned", label: "I've been shunned" },
     { id: "practical-help", label: "I need practical help" },
     { id: "struggling", label: "I'm struggling" },
-    { id: "supporting", label: "I'm supporting someone else" },
-    { id: "want-to-help", label: "I want to help" },
   ];
 
   window.PATHWAY_TOPICS = [
     {
-      id: "right-decision",
-      label: "Am I making the right decision?",
-      for: ["thinking"],
-      reason: "You're still deciding whether to leave.",
-      articles: [
-        "how-do-you-know-if-youre-ready-to-leave",
-        "learning-to-trust-your-own-judgement-again",
-      ],
-    },
-    {
-      id: "what-happens",
-      label: "What will happen if I leave?",
-      for: ["thinking"],
-      reason: "You want a clearer picture of what comes next.",
-      articles: ["first-48-hours-after-leaving", "planning-your-exit"],
-    },
-    {
-      id: "lose-family",
-      label: "Will I lose my family?",
-      for: ["thinking"],
-      reason: "You're worried about family if you leave.",
+      id: "family",
+      label: "Family is a big part of this",
+      reason: "Family is still in the picture.",
       articles: [
         "when-your-parents-are-still-in-and-getting-older",
-        "understanding-shunning-why-its-designed-to-work",
         "talking-to-your-children-about-why-things-have-changed",
-      ],
-    },
-    {
-      id: "prepare-safely",
-      label: "How can I prepare safely?",
-      for: ["thinking"],
-      reason: "You want a quiet, practical plan before anyone else knows.",
-      articles: ["planning-your-exit", "opening-bank-account"],
-    },
-    {
-      id: "where-to-start",
-      label: "I don't know where to start",
-      for: ["recently-left"],
-      reason: "You've recently left and need a first step, not a whole plan.",
-      articles: [
-        "first-48-hours-after-leaving",
-        "setting-goals-when-youve-never-been-allowed-to-want-things-for-yourself",
-      ],
-    },
-    {
-      id: "isolated",
-      label: "I feel isolated",
-      for: ["recently-left", "shunned"],
-      reason: "You're feeling cut off from people.",
-      articles: [
-        "the-silence-after-what-the-first-few-months-of-being-shunned-actually-feel-like",
-        "why-some-days-are-harder-than-others-for-no-clear-reason",
-      ],
-    },
-    {
-      id: "uncertain",
-      label: "Everything feels uncertain",
-      for: ["recently-left"],
-      reason: "The old identity has gone and nothing solid has replaced it yet.",
-      articles: [
-        "who-am-i-if-im-not-that-anymore",
-        "discovering-what-you-actually-enjoy",
+        "co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore",
       ],
     },
     {
       id: "practical",
-      label: "I need practical guidance",
-      for: ["recently-left"],
-      reason: "Day-to-day life is the immediate problem.",
+      label: "Money, housing, or day-to-day practical stuff",
+      reason: "The practical side is part of what you ticked.",
       articles: [
         "opening-bank-account",
+        "what-to-do-if-youre-at-risk-of-homelessness",
         "renting-for-the-first-time-deposits-contracts-and-what-to-watch-for",
-        "explaining-employment-gaps",
+        "budgeting-when-youre-starting-from-zero",
       ],
     },
     {
-      id: "understand",
-      label: "I want to understand what's happening",
-      for: ["shunned"],
-      reason: "You want shunning explained as a system, not a personal verdict.",
-      articles: ["understanding-shunning-why-its-designed-to-work"],
-    },
-    {
-      id: "cope-silence",
-      label: "I don't know how to cope with the silence",
-      for: ["shunned"],
-      reason: "The silence after leaving is what you're sitting with.",
-      articles: [
-        "the-silence-after-what-the-first-few-months-of-being-shunned-actually-feel-like",
-        "why-some-days-are-harder-than-others-for-no-clear-reason",
-      ],
-    },
-    {
-      id: "alone",
-      label: "I feel completely alone",
-      for: ["shunned"],
-      reason: "You're carrying this without a community around you.",
-      articles: [
-        "the-silence-after-what-the-first-few-months-of-being-shunned-actually-feel-like",
-        "why-some-days-are-harder-than-others-for-no-clear-reason",
-      ],
-    },
-    {
-      id: "reconnect",
-      label: "Should I try to reconnect?",
-      for: ["shunned"],
-      reason: "You're weighing reinstatement or reaching back.",
-      articles: [
-        "should-you-try-to-reconnect-or-let-it-rest-thinking-through-reinstatement-pressure",
-      ],
-    },
-    {
-      id: "employment",
-      label: "Employment",
-      for: ["practical-help"],
-      reason: "Work is one of the things you asked for help with.",
+      id: "work",
+      label: "Work or learning",
+      reason: "Work or education is part of what you ticked.",
       articles: [
         "figuring-out-what-you-actually-want-to-do",
         "explaining-employment-gaps",
-        "networking-without-a-network",
-      ],
-    },
-    {
-      id: "education",
-      label: "Education",
-      for: ["practical-help"],
-      reason: "You want a route back into learning.",
-      articles: [
         "going-back-to-school-as-an-adult-gcses-access-courses-and-where-to-start",
-        "is-university-actually-realistic-for-me",
-        "filling-educational-gaps-without-going-back-to-a-classroom",
       ],
     },
     {
-      id: "money",
-      label: "Money",
-      for: ["practical-help", "recently-left", "thinking"],
-      reason: "Money is part of what you ticked.",
+      id: "feeling",
+      label: "I feel isolated, stuck, or all over the place",
+      reason: "How you're feeling is part of this.",
       articles: [
-        "opening-bank-account",
-        "budgeting-when-youre-starting-from-zero",
-        "when-money-was-never-really-yours-to-control",
-      ],
-    },
-    {
-      id: "housing",
-      label: "Housing",
-      for: ["practical-help", "recently-left", "thinking"],
-      reason: "Somewhere to live is part of what you ticked.",
-      articles: [
-        "what-to-do-if-youre-at-risk-of-homelessness",
-        "renting-for-the-first-time-deposits-contracts-and-what-to-watch-for",
+        "why-some-days-are-harder-than-others-for-no-clear-reason",
+        "who-am-i-if-im-not-that-anymore",
+        "the-silence-after-what-the-first-few-months-of-being-shunned-actually-feel-like",
       ],
     },
     {
       id: "drinking",
       label: "I'm drinking or using more than I want",
-      for: ["struggling"],
       reason: "Coping has started to cost you.",
       articles: [
         "why-addiction-shows-up-so-often-after-leaving",
@@ -185,160 +70,8 @@
       ],
     },
     {
-      id: "emotionally",
-      label: "I'm struggling emotionally",
-      for: ["struggling"],
-      reason: "The emotional weight is what you named.",
-      articles: [
-        "why-some-days-are-harder-than-others-for-no-clear-reason",
-        "who-am-i-if-im-not-that-anymore",
-        "learning-to-trust-your-own-judgement-again",
-      ],
-    },
-    {
-      id: "relationships",
-      label: "My relationships are suffering",
-      for: ["struggling"],
-      reason: "The people around you are part of this.",
-      articles: [
-        "talking-to-your-children-about-why-things-have-changed",
-        "co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore",
-        "why-addiction-shows-up-so-often-after-leaving",
-      ],
-    },
-    {
-      id: "nowhere",
-      label: "I don't know where to turn",
-      for: ["struggling"],
-      reason: "You asked for a next step when nothing feels obvious.",
-      articles: [
-        "why-some-days-are-harder-than-others-for-no-clear-reason",
-        "first-48-hours-after-leaving",
-      ],
-      actions: [
-        {
-          href: "apply.html",
-          title: "Apply for support",
-          why: "If you'd rather talk to us than read another page.",
-        },
-      ],
-    },
-    {
-      id: "understand-them",
-      label: "I don't understand what they're going through",
-      for: ["supporting"],
-      reason: "You're supporting someone and want the picture in plain English.",
-      articles: [
-        "understanding-shunning-why-its-designed-to-work",
-        "who-am-i-if-im-not-that-anymore",
-        "why-addiction-shows-up-so-often-after-leaving",
-      ],
-    },
-    {
-      id: "help-without-harm",
-      label: "How can I help without making things worse?",
-      for: ["supporting"],
-      reason: "You want to support someone without pushing.",
-      articles: [
-        "talking-to-your-children-about-why-things-have-changed",
-        "co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore",
-        "when-your-parents-are-still-in-and-getting-older",
-      ],
-    },
-    {
-      id: "teenager",
-      label: "I'm supporting a teenager",
-      for: ["supporting"],
-      reason: "You're the adult supporting a young person.",
-      articles: [
-        "supporting-a-teenager-whos-questioning-their-faith",
-        "having-doubts-about-what-youve-been-taught",
-        "you-dont-have-to-have-it-all-figured-out-yet",
-      ],
-    },
-    {
-      id: "grief-trauma",
-      label: "They're dealing with grief, trauma, or addiction",
-      for: ["supporting"],
-      reason: "The person you're supporting is also dealing with grief, trauma, or addiction.",
-      articles: [
-        "why-addiction-shows-up-so-often-after-leaving",
-        "recognising-the-signs-in-yourself-or-someone-you-love",
-        "healthy-coping-strategies-to-replace-whats-not-working",
-      ],
-    },
-    {
-      id: "volunteer",
-      label: "Volunteer",
-      for: ["want-to-help"],
-      reason: "You'd like to volunteer.",
-      articles: [],
-      actions: [
-        {
-          href: "apply.html",
-          title: "Apply / get in touch",
-          why: "Tell us how you'd like to help.",
-        },
-        { href: "about.html", title: "About Us", why: "Who we are and how the work is run." },
-      ],
-    },
-    {
-      id: "donate",
-      label: "Donate",
-      for: ["want-to-help"],
-      reason: "You want to help keep this free.",
-      articles: [],
-      actions: [
-        { href: "donate.html", title: "Donate", why: "Help keep this free." },
-        {
-          href: "our-mission.html",
-          title: "Our Mission",
-          why: "What the work is for, in plain terms.",
-        },
-      ],
-    },
-    {
-      id: "professional",
-      label: "Offer professional expertise",
-      for: ["want-to-help"],
-      reason: "You have professional expertise to offer.",
-      articles: [],
-      actions: [
-        {
-          href: "contact.html",
-          title: "Contact",
-          why: "The best place to introduce yourself and what you can offer.",
-        },
-      ],
-    },
-    {
-      id: "story",
-      label: "Share my story",
-      for: ["want-to-help"],
-      reason: "You might want to share your story.",
-      articles: [],
-      actions: [
-        {
-          href: "contact.html",
-          title: "Contact",
-          why: "Send a note. There's no pressure to publish anything.",
-        },
-      ],
-    },
-    {
-      id: "teen",
-      label: "I'm under 18",
-      for: ["thinking", "recently-left", "shunned", "practical-help", "struggling"],
-      reason: "This is for you as a young person. We don't contact parents.",
-      articles: [
-        "having-doubts-about-what-youve-been-taught",
-        "you-dont-have-to-have-it-all-figured-out-yet",
-      ],
-    },
-    {
       id: "lgbtq",
       label: "Sexuality or gender is part of this",
-      for: ["thinking", "recently-left", "shunned", "struggling", "supporting"],
       reason: "Sexuality or gender is part of what you ticked.",
       articles: [
         "unlearning-shame-that-was-taught-as-fact",
@@ -347,21 +80,12 @@
       ],
     },
     {
-      id: "private",
-      label: "I need to be careful who sees this",
-      for: ["thinking", "recently-left", "shunned"],
-      reason: "You need to look at this quietly.",
-      articles: ["planning-your-exit"],
-    },
-    {
-      id: "family",
-      label: "Family still in, or children involved",
-      for: ["thinking", "recently-left", "shunned", "struggling"],
-      reason: "Family is still in the picture.",
+      id: "teen",
+      label: "I'm under 18",
+      reason: "This is for you as a young person. We don't contact parents.",
       articles: [
-        "when-your-parents-are-still-in-and-getting-older",
-        "talking-to-your-children-about-why-things-have-changed",
-        "co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore",
+        "having-doubts-about-what-youve-been-taught",
+        "you-dont-have-to-have-it-all-figured-out-yet",
       ],
     },
   ];
@@ -403,12 +127,14 @@
       "why-some-days-are-harder-than-others-for-no-clear-reason",
       "recognising-the-signs-in-yourself-or-someone-you-love",
     ],
-    supporting: [
-      "supporting-a-teenager-whos-questioning-their-faith",
-      "talking-to-your-children-about-why-things-have-changed",
-    ],
-    "want-to-help": [],
   };
+
+  var FALLBACK_ARTICLES = [
+    "first-48-hours-after-leaving",
+    "why-some-days-are-harder-than-others-for-no-clear-reason",
+    "opening-bank-account",
+    "who-am-i-if-im-not-that-anymore",
+  ];
 
   var COMBOS = [
     {
@@ -419,66 +145,29 @@
       weight: 8,
     },
     {
-      topics: ["teen", "right-decision"],
-      slugs: [
-        "having-doubts-about-what-youve-been-taught",
-        "you-dont-have-to-have-it-all-figured-out-yet",
-      ],
-      reason: "You're under 18 and still deciding. You don't have to decide today.",
-      weight: 9,
-    },
-    {
-      topics: ["housing", "prepare-safely"],
-      slugs: ["planning-your-exit", "what-to-do-if-youre-at-risk-of-homelessness"],
-      reason: "You're preparing to leave and housing is one of the live problems.",
+      pathways: ["thinking"],
+      topics: ["practical"],
+      slugs: ["planning-your-exit", "opening-bank-account", "what-to-do-if-youre-at-risk-of-homelessness"],
+      reason: "You're preparing to leave and the practical side needs to be in place first.",
       weight: 8,
     },
     {
-      topics: ["money", "prepare-safely"],
-      slugs: ["planning-your-exit", "opening-bank-account"],
-      reason: "You're preparing to leave and money needs to be in your own name.",
-      weight: 8,
-    },
-    {
-      topics: ["housing", "where-to-start"],
-      slugs: [
-        "first-48-hours-after-leaving",
-        "what-to-do-if-youre-at-risk-of-homelessness",
-      ],
-      reason: "You've recently left and housing is urgent.",
-      weight: 8,
-    },
-    {
-      topics: ["lose-family", "reconnect"],
-      slugs: [
-        "should-you-try-to-reconnect-or-let-it-rest-thinking-through-reinstatement-pressure",
-      ],
-      reason: "Family silence and the question of reconnecting are both in play.",
-      weight: 7,
-    },
-    {
-      topics: ["drinking", "relationships"],
-      slugs: ["why-addiction-shows-up-so-often-after-leaving"],
-      reason: "Coping and relationships are both under strain.",
-      weight: 7,
-    },
-    {
-      topics: ["lgbtq", "isolated"],
+      topics: ["lgbtq", "feeling"],
       slugs: ["finding-lgbtq-community-when-you-missed-out-on-it-growing-up"],
       reason: "You're looking for people after missing that community growing up.",
       weight: 7,
-    },
-    {
-      topics: ["employment", "uncertain"],
-      slugs: ["figuring-out-what-you-actually-want-to-do"],
-      reason: "Work is on the table and you don't yet know what you'd actually want.",
-      weight: 6,
     },
     {
       pathways: ["recently-left"],
       topics: ["family"],
       slugs: ["talking-to-your-children-about-why-things-have-changed"],
       reason: "You've left, and family or children are still in the picture.",
+      weight: 6,
+    },
+    {
+      topics: ["work", "feeling"],
+      slugs: ["figuring-out-what-you-actually-want-to-do"],
+      reason: "Work is on the table and you don't yet know what you'd actually want.",
       weight: 6,
     },
   ];
@@ -514,15 +203,6 @@
     return null;
   };
 
-  window.topicsForPathways = function (pathwayIds) {
-    var selected = pathwayIds || [];
-    return (window.PATHWAY_TOPICS || []).filter(function (topic) {
-      return topic.for.some(function (id) {
-        return has(selected, id);
-      });
-    });
-  };
-
   function findArticle(slug) {
     var list = (window.getPublishedResourceArticles
       ? window.getPublishedResourceArticles()
@@ -533,11 +213,28 @@
     return null;
   }
 
-  function bump(scores, slug, weight, reason) {
+  window.topicsForPathways = function () {
+    return (window.PATHWAY_TOPICS || []).filter(function (topic) {
+      return (topic.articles || []).some(function (slug) {
+        return !!findArticle(slug);
+      });
+    });
+  };
+
+  window.getResourcePathwayChoices = function () {
+    return (window.PATHWAY_CHOICES || []).filter(function (choice) {
+      return (PATHWAY_DEFAULTS[choice.id] || []).some(function (slug) {
+        return !!findArticle(slug);
+      });
+    });
+  };
+
+  function bump(scores, slug, weight, reason, front) {
     if (!scores[slug]) scores[slug] = { slug: slug, score: 0, reasons: [] };
     scores[slug].score += weight;
     if (reason && scores[slug].reasons.indexOf(reason) === -1) {
-      scores[slug].reasons.push(reason);
+      if (front) scores[slug].reasons.unshift(reason);
+      else scores[slug].reasons.push(reason);
     }
   }
 
@@ -555,8 +252,18 @@
 
   window.buildPathwayResults = function (answers) {
     answers = answers || { pathways: [], topics: [], capacity: "" };
-    var pathways = unique(answers.pathways || []);
-    var topics = unique(answers.topics || []);
+    var knownTopics = {};
+    (window.PATHWAY_TOPICS || []).forEach(function (topic) {
+      knownTopics[topic.id] = true;
+    });
+    var pathways = unique(answers.pathways || []).filter(function (id) {
+      return (PATHWAY_DEFAULTS[id] || []).some(function (slug) {
+        return !!findArticle(slug);
+      });
+    });
+    var topics = unique(answers.topics || []).filter(function (id) {
+      return knownTopics[id];
+    });
     var capacity = answers.capacity || "stretch";
     var scores = {};
     var actions = [];
@@ -588,7 +295,7 @@
     COMBOS.forEach(function (combo) {
       if (!comboMatches(combo, { pathways: pathways, topics: topics })) return;
       (combo.slugs || []).forEach(function (slug) {
-        bump(scores, slug, combo.weight || 6, combo.reason);
+        bump(scores, slug, combo.weight || 6, combo.reason, true);
       });
     });
 
@@ -598,7 +305,7 @@
       });
     }
 
-    if (has(pathways, "struggling") || capacity === "overwhelm" || has(topics, "nowhere") || has(topics, "emotionally")) {
+    if (has(pathways, "struggling") || capacity === "overwhelm" || has(topics, "feeling") || has(topics, "drinking")) {
       addAction({
         href: "apply.html",
         title: "Apply for support",
@@ -606,7 +313,7 @@
       });
     }
 
-    if (has(topics, "private") || has(topics, "prepare-safely")) {
+    if (has(pathways, "thinking")) {
       addAction({
         href: "#",
         title: "",
@@ -615,20 +322,30 @@
       });
     }
 
-    var ranked = Object.keys(scores)
-      .map(function (slug) {
-        var article = findArticle(slug);
-        if (!article) return null;
-        return {
-          article: article,
-          score: scores[slug].score,
-          reasons: scores[slug].reasons.slice(0, 2),
-        };
-      })
-      .filter(Boolean)
-      .sort(function (a, b) {
-        return b.score - a.score;
+    function rankScores() {
+      return Object.keys(scores)
+        .map(function (slug) {
+          var article = findArticle(slug);
+          if (!article) return null;
+          return {
+            article: article,
+            score: scores[slug].score,
+            reasons: scores[slug].reasons.slice(0, 2),
+          };
+        })
+        .filter(Boolean)
+        .sort(function (a, b) {
+          return b.score - a.score;
+        });
+    }
+
+    var ranked = rankScores();
+    if (!ranked.length) {
+      FALLBACK_ARTICLES.forEach(function (slug, i) {
+        bump(scores, slug, 5 - i, "A starting set from the library.");
       });
+      ranked = rankScores();
+    }
 
     if (has(topics, "teen")) {
       ranked.sort(function (a, b) {
@@ -687,7 +404,7 @@
         "If you are in crisis, Samaritans are available 24/7 on 116 123 (UK, free). These pages are not emergency support."
       );
     }
-    if (has(topics, "private") || has(topics, "prepare-safely")) {
+    if (has(pathways, "thinking")) {
       notes.push("If you need to leave this page quickly, use Exit now in the corner. It goes to Google.");
     }
     if (has(topics, "teen")) {

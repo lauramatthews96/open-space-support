@@ -3550,10 +3550,14 @@ body.pathways-open {
   overflow: hidden;
 }
 
+body.pathways-open .quick-exit {
+  z-index: 220;
+}
+
 .pathways-root {
   position: fixed;
   inset: 0;
-  z-index: 90;
+  z-index: 200;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3567,15 +3571,17 @@ body.pathways-open {
 .pathways-backdrop {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: rgba(27, 75, 74, 0.42);
 }
 
 .pathways-panel {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(36rem, 100%);
-  max-height: 100%;
+  max-height: calc(100dvh - 8.5rem);
   overflow: auto;
+  pointer-events: auto;
   padding: 1.75rem 1.6rem 1.5rem;
   background: var(--frame-bg);
   border: 1px solid rgba(27, 75, 74, 0.12);
@@ -3726,12 +3732,17 @@ body.pathways-open {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 0.25rem;
+  position: relative;
+  z-index: 3;
 }
 
-.pathways-actions .btn:disabled {
+.pathways-actions .btn {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.pathways-actions .btn.is-idle {
   opacity: 0.45;
-  cursor: not-allowed;
-  transform: none;
 }
 
 .pathways-actions-back {

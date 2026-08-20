@@ -117,47 +117,47 @@ window.readingCoverFallbackUrl = function readingCoverFallbackUrl(isbn) {
 var READING_PATHWAY_MATCH = {
   "feel-the-fear-and-do-it-anyway": {
     pathways: ["thinking", "recently-left"],
-    topics: ["right-decision", "prepare-safely", "what-happens", "where-to-start", "employment"],
+    topics: ["work", "practical", "feeling"],
     reason: "You're in a transition, and this is about moving while the fear is still there.",
     weight: 6,
   },
   "eat-that-frog": {
     pathways: ["practical-help", "recently-left"],
-    topics: ["employment", "education", "practical", "where-to-start", "money"],
+    topics: ["work", "practical"],
     reason: "When everything feels like a lot, one important task at a time is a useful place to start.",
     weight: 6,
   },
   "happiness-in-a-nutshell": {
     pathways: ["struggling", "recently-left", "shunned"],
-    topics: ["emotionally", "isolated", "alone", "cope-silence", "teen"],
+    topics: ["feeling", "teen"],
     reason: "A lighter read when heavier books would be too much.",
     weight: 5,
   },
   "you-can-heal-your-life": {
     pathways: ["recently-left", "shunned", "struggling"],
-    topics: ["uncertain", "emotionally", "lgbtq", "identity"],
+    topics: ["feeling", "lgbtq"],
     skipCapacity: ["overwhelm"],
     reason: "For noticing beliefs about yourself that were absorbed earlier, and treating them more kindly.",
     weight: 5,
   },
   "the-road-less-travelled": {
-    pathways: ["shunned", "supporting", "struggling"],
-    topics: ["reconnect", "relationships", "grief-trauma", "understand", "help-without-harm"],
+    pathways: ["shunned", "struggling"],
+    topics: ["family", "drinking", "feeling"],
     skipCapacity: ["overwhelm"],
     skipTopics: ["teen"],
     reason: "A deeper look at grief, responsibility, and what growing through this can actually ask of you.",
     weight: 5,
   },
   "the-7-habits-of-highly-effective-people": {
-    pathways: ["practical-help", "recently-left", "want-to-help"],
-    topics: ["employment", "education", "practical", "volunteer"],
+    pathways: ["practical-help", "recently-left"],
+    topics: ["work", "practical"],
     skipCapacity: ["overwhelm"],
     reason: "For rebuilding a working life on purpose, not only reacting to whatever is loudest.",
     weight: 5,
   },
   "awaken-the-giant-within": {
     pathways: ["practical-help", "recently-left"],
-    topics: ["employment", "uncertain", "where-to-start"],
+    topics: ["work", "feeling"],
     skipCapacity: ["overwhelm"],
     skipTopics: ["teen"],
     reason: "If understanding the past now needs to be paired with deciding what comes next.",
@@ -165,9 +165,9 @@ var READING_PATHWAY_MATCH = {
   },
   "the-celestine-prophecy": {
     pathways: ["thinking", "recently-left"],
-    topics: ["uncertain", "right-decision"],
+    topics: ["feeling"],
     skipCapacity: ["overwhelm"],
-    skipTopics: ["teen", "private"],
+    skipTopics: ["teen"],
     reason: "A different way into questions of meaning, after a worldview that used to be fixed.",
     weight: 3,
   },
@@ -215,7 +215,7 @@ window.getReadingForPathwayAnswers = function getReadingForPathwayAnswers(answer
   var limit = capacity === "overwhelm" ? 2 : capacity === "comfort" ? 4 : 3;
   if (readingHas(topics, "teen")) limit = Math.min(limit, 2);
 
-  if (!scored.length && !readingHas(pathways, "want-to-help")) {
+  if (!scored.length) {
     var fallback = books.filter(function (book) {
       return book.slug === "happiness-in-a-nutshell" || book.slug === "feel-the-fear-and-do-it-anyway";
     });
