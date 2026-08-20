@@ -14,8 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Karla:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=140" />
-    <link rel="stylesheet" href="css/contact.css?v=1" />
+    <link rel="stylesheet" href="css/styles.css?v=142" />
+    <link rel="stylesheet" href="css/contact.css?v=2" />
   </head>
   <body class="contact-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -68,11 +68,30 @@
               explain your whole situation here - a few lines is enough to start.
             </p>
 
+            <p
+              class="contact-sent"
+              id="contact-sent"
+              hidden
+              tabindex="-1"
+              role="status"
+            >
+              Message sent. We'll read it and get back to you as soon as we can.
+            </p>
+
             <form
               class="contact-form newsletter-form"
+              id="contact-form"
+              name="contact"
+              method="POST"
+              action="/contact.html?sent=1"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
               aria-labelledby="contact-form-heading"
-              onsubmit="event.preventDefault(); alert('Contact form will connect at launch.');"
             >
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="contact-honeypot">
+                <label>Don’t fill this in <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+              </p>
               <div class="contact-field">
                 <label for="contact-name">Name</label>
                 <input id="contact-name" type="text" name="name" required autocomplete="name" />
@@ -163,6 +182,18 @@
 
         <script src="js/resources-data.js"></script>
     <script src="js/site-nav.js?v=5"></script>
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=5"></script>
+    <script>
+      (function () {
+        if (new URLSearchParams(window.location.search).get("sent") !== "1") return;
+        var form = document.getElementById("contact-form");
+        var sent = document.getElementById("contact-sent");
+        if (form) form.hidden = true;
+        if (sent) {
+          sent.hidden = false;
+          sent.focus();
+        }
+      })();
+    </script>
   </body>
 </html>

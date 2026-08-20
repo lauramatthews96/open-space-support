@@ -176,8 +176,26 @@
   text-underline-offset: 2px;
 }
 
-.contact-aside a:hover {
-  color: #153938;
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-sent {
+  margin: 0 0 1.25rem;
+  padding: 0.9rem 1rem;
+  background: rgba(139, 168, 136, 0.22);
+  border: 1px solid rgba(27, 75, 74, 0.14);
+  border-radius: 8px;
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
+.contact-sent:focus {
+  outline: none;
 }
 
 @media (max-width: 768px) {

@@ -163,3 +163,31 @@ document.querySelectorAll("[data-nav-dropdown]").forEach((dropdown) => {
     }
   });
 });
+
+(function initQuickExit() {
+  var el = document.querySelector(".quick-exit");
+  if (!el) return;
+  var key = "oss_quick_exit_hidden_v1";
+  try {
+    if (localStorage.getItem(key) === "1") {
+      el.hidden = true;
+      return;
+    }
+  } catch (e) {
+    /* storage blocked */
+  }
+
+  var dismiss = document.createElement("button");
+  dismiss.type = "button";
+  dismiss.className = "quick-exit-dismiss";
+  dismiss.textContent = "I'm safe, hide this";
+  dismiss.addEventListener("click", function () {
+    try {
+      localStorage.setItem(key, "1");
+    } catch (e) {
+      /* storage blocked */
+    }
+    el.hidden = true;
+  });
+  el.appendChild(dismiss);
+})();
