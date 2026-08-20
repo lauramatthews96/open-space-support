@@ -96,6 +96,10 @@
       : "");
 
   var applyCta = document.querySelector(".header-cta");
+  if (applyCta && applyCta.childElementCount === 0) {
+    applyCta.innerHTML =
+      'Apply<span class="header-cta-extra">&nbsp;for Support</span>';
+  }
   if (SHOW_DONATE && applyCta && !document.querySelector(".header-donate")) {
     var donateBtn = document.createElement("a");
     donateBtn.className = "btn btn-outline-dark header-donate";
