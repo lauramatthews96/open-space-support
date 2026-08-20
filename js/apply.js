@@ -373,6 +373,45 @@
     }
   }
 
+  function encodeNetlifyBody() {
+    var data = readFormData();
+    var params = new URLSearchParams();
+    params.set("form-name", "apply");
+    params.set("bot-field", "");
+    params.set("full_name", data.full_name);
+    params.set("email", data.email);
+    params.set("phone", data.phone || "");
+    params.set("contact_preferences", data.contact_preferences || "");
+    params.set("needs", (data.needs || []).join(", "));
+    params.set("needs_other", data.needs_other || "");
+    params.set("current_situation", data.current_situation || "");
+    params.set("support_requested", data.support_requested || "");
+    params.set("goals", data.goals || "");
+    params.set("consent", "yes");
+    return params.toString();
+  }
+
+  function submitToNetlify() {
+    return fetch("/apply.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encodeNetlifyBody(),
+    }).then(function (res) {
+      if (!res.ok) throw new Error("netlify");
+    });
+  }
+
+  function submitToSupabase() {
+    supabaseClient = supabaseClient || initSupabase();
+    if (!supabaseClient) return Promise.resolve();
+    return supabaseClient
+      .from("support_applications")
+      .insert([buildPayload()])
+      .then(function (result) {
+        if (result.error) throw result.error;
+      });
+  }
+
   function handleSubmit(event) {
     if (event) event.preventDefault();
 
@@ -391,26 +430,13 @@
     submitBtn.textContent = "Sending…";
     hideMessage();
 
-    supabaseClient = supabaseClient || initSupabase();
-
-    if (!supabaseClient) {
-      showMessage(
-        "We're not quite connected to our secure database yet. Please try again shortly, or email us via the contact page."
-      );
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Send my application";
-      return;
-    }
-
-    supabaseClient
-      .from("support_applications")
-      .insert([buildPayload()])
-      .then(function (result) {
-        if (result.error) {
-          throw result.error;
-        }
-        showConfirmation();
+    submitToNetlify()
+      .then(function () {
+        return submitToSupabase().catch(function () {
+          /* Application already emailed via Netlify */
+        });
       })
+      .then(showConfirmation)
       .catch(function () {
         showMessage(
           "Something went wrong sending your application. Your answers are still saved here - please try again in a moment."
