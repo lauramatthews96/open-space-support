@@ -140,6 +140,11 @@ p { color: var(--text-muted); margin: 0 0 1rem; }
   box-shadow: 0 4px 24px rgba(27, 75, 74, 0.06);
 }
 
+html.nav-open,
+body.nav-open {
+  overflow: hidden;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -3495,7 +3500,14 @@ section.section-resources {
     box-shadow: none;
     gap: 0.15rem;
   }
-  .nav.is-open { display: flex; }
+  .nav.is-open {
+    display: flex;
+    max-height: calc(100dvh - 12rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
   .nav a {
     padding: 0.95rem 1rem;
     width: 100%;

@@ -104,6 +104,8 @@ if (toggle && nav) {
     const open = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!open));
     nav.classList.toggle("is-open", !open);
+    document.documentElement.classList.toggle("nav-open", !open);
+    document.body.classList.toggle("nav-open", !open);
   });
 }
 
