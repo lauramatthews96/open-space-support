@@ -1382,6 +1382,10 @@ section.section-resources {
   background-image: url("../images/housing-risk-of-homelessness.jpg");
 }
 
+.latest-thumb-37 {
+  background-image: url("../images/housing-setting-up-home.jpg");
+}
+
 .latest-card-body {
   display: flex;
   flex-direction: column;

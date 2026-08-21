@@ -36,6 +36,7 @@
         "opening-bank-account",
         "what-to-do-if-youre-at-risk-of-homelessness",
         "renting-for-the-first-time-deposits-contracts-and-what-to-watch-for",
+        "setting-up-a-home-from-nothing",
         "budgeting-when-youre-starting-from-zero",
       ],
     },
@@ -121,7 +122,7 @@
     "practical-help": [
       "opening-bank-account",
       "explaining-employment-gaps",
-      "what-to-do-if-youre-at-risk-of-homelessness",
+      "setting-up-a-home-from-nothing",
     ],
     struggling: [
       "why-some-days-are-harder-than-others-for-no-clear-reason",

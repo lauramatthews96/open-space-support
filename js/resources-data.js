@@ -663,6 +663,22 @@ window.RESOURCE_ARTICLES = [
       "A phone, an open notebook and a mug of tea on a table by a sunlit window - getting ready to make the call",
     hasSafetyNote: true,
   },
+  {
+    slug: "setting-up-a-home-from-nothing",
+    path: "resources/housing/setting-up-a-home-from-nothing.html",
+    title: "Setting up a home from nothing",
+    category: "Housing",
+    categorySlug: "housing",
+    readTime: "5 min read",
+    updated: "August 2026",
+    excerpt:
+      "Start with sleep, a kettle, and what's actually needed - then build the rest gradually, cheaply or free.",
+    thumbClass: "latest-thumb-37",
+    heroImage: "images/housing-setting-up-home.jpg",
+    heroAlt:
+      "A made bed and a small bedside table with a lamp - a simple first space taking shape",
+    hasSafetyNote: true,
+  },
 ];
 
 /**
