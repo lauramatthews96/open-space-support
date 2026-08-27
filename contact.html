@@ -91,6 +91,7 @@
               aria-labelledby="contact-form-heading"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" id="contact-counsellor" name="counsellor" value="" />
               <p class="contact-honeypot">
                 <label>Don’t fill this in <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
               </p>
@@ -188,7 +189,26 @@
     <script src="js/main.js?v=6"></script>
     <script>
       (function () {
-        if (new URLSearchParams(window.location.search).get("sent") !== "1") return;
+        var params = new URLSearchParams(window.location.search);
+        var names = {
+          "dieter-rohmann": "Dieter Rohmann",
+          "nadja-zollinger": "Nadja Zollinger",
+          "ryan-lee": "Dr Ryan Lee"
+        };
+        var counsellor = names[params.get("counsellor") || ""];
+        if (counsellor) {
+          var hidden = document.getElementById("contact-counsellor");
+          var message = document.getElementById("contact-message");
+          var heading = document.getElementById("contact-form-heading");
+          if (hidden) hidden.value = counsellor;
+          if (heading) heading.textContent = "Request support from " + counsellor;
+          if (message && !message.value) {
+            message.value = "I would like to request support from " + counsellor + ".";
+            message.placeholder = "Add anything you'd like us to know.";
+          }
+        }
+
+        if (params.get("sent") !== "1") return;
         var form = document.getElementById("contact-form");
         var sent = document.getElementById("contact-sent");
         if (form) form.hidden = true;
