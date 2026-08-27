@@ -89,6 +89,9 @@
     "</div>" +
     "</div>" +
     '<a href="' +
+    href("counsellors.html") +
+    '">Counsellors</a>' +
+    '<a href="' +
     href("contact.html") +
     '">Contact</a>' +
     (SHOW_DONATE

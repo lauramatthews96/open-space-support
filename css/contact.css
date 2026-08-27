@@ -69,6 +69,13 @@
   margin: 0;
 }
 
+.contact-intro-sub a {
+  color: var(--gold-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .contact-intro-photo {
   margin: 0;
 }

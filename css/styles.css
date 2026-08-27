@@ -3436,6 +3436,22 @@ section.section-resources {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+@media (max-width: 1180px) and (min-width: 961px) {
+  .nav a,
+  .nav-dropdown-toggle {
+    padding: 0.55rem 0.62rem;
+    font-size: 0.95rem;
+  }
+
+  .header-cta .header-cta-extra {
+    display: none;
+  }
+
+  .header-cta {
+    padding: 0.7rem 1.05rem;
+  }
+}
+
 @media (max-width: 960px) {
   .header-donate { display: none; }
   .nav-donate { display: block; }
