@@ -308,7 +308,7 @@
 
     if (has(pathways, "struggling") || capacity === "overwhelm" || has(topics, "feeling") || has(topics, "drinking")) {
       addAction({
-        href: "apply.html",
+        href: "/apply",
         title: "Apply for support",
         why: "A confidential way to ask us for help if you'd rather a person than another article.",
       });

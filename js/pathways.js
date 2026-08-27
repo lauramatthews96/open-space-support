@@ -8,11 +8,10 @@
   var AUTO_DELAY_MS = 7000;
   var AUTO_DELAY_REDUCED_MS = 1200;
 
-  var root =
-    window.location.pathname.indexOf("/resources/") !== -1 ? "../../" : "";
-
   function href(path) {
-    return root + path;
+    if (!path || path === "index" || path === "/") return "/";
+    if (path.charAt(0) === "/") return path;
+    return "/" + path;
   }
 
   function escapeHtml(str) {
@@ -69,15 +68,15 @@
   }
 
   function currentPage() {
-    return window.location.pathname.split("/").pop() || "index.html";
+    return (window.location.pathname.split("/").pop() || "index").replace(/\.html$/, "") || "index";
   }
 
   function shouldAutoOpen() {
     var page = currentPage();
     if (window.location.hash === "#pathways") return true;
-    if (page === "your-resources.html") return false;
-    if (page !== "index.html" && page !== "resources.html") return false;
-    if (page === "resources.html" && new URLSearchParams(window.location.search).get("category")) {
+    if (page === "your-resources") return false;
+    if (page !== "index" && page !== "resources") return false;
+    if (page === "resources" && new URLSearchParams(window.location.search).get("category")) {
       return false;
     }
     var pref = readPref();
@@ -262,7 +261,7 @@
   function finish() {
     saveAnswers();
     writePref("done");
-    window.location.href = href("your-resources.html");
+    window.location.href = href("your-resources");
   }
 
   function goNext() {

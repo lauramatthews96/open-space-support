@@ -105,7 +105,7 @@ window.RESOURCE_CATEGORIES = [
 window.RESOURCE_ARTICLES = [
   {
     slug: "explaining-employment-gaps",
-    path: "resources/career-employment/explaining-employment-gaps.html",
+    path: "/resources/career-employment/explaining-employment-gaps",
     title: "Explaining employment gaps in interviews",
     category: "Career & Employment",
     categorySlug: "career-employment",
@@ -122,7 +122,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "figuring-out-what-you-actually-want-to-do",
-    path: "resources/career-employment/figuring-out-what-you-actually-want-to-do.html",
+    path: "/resources/career-employment/figuring-out-what-you-actually-want-to-do",
     title: "Figuring out what you actually want to do",
     category: "Career & Employment",
     categorySlug: "career-employment",
@@ -138,7 +138,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "networking-without-a-network",
-    path: "resources/career-employment/networking-without-a-network.html",
+    path: "/resources/career-employment/networking-without-a-network",
     title: "Networking without a network",
     category: "Career & Employment",
     categorySlug: "career-employment",
@@ -154,7 +154,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "talking-to-your-children-about-why-things-have-changed",
-    path: "resources/family-relationships/talking-to-your-children-about-why-things-have-changed.html",
+    path: "/resources/family-relationships/talking-to-your-children-about-why-things-have-changed",
     title: "Talking to your children about why things have changed",
     category: "Family & Relationships",
     categorySlug: "family-relationships",
@@ -169,7 +169,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore",
-    path: "resources/family-relationships/co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore.html",
+    path: "/resources/family-relationships/co-parenting-when-you-and-your-ex-dont-agree-on-faith-anymore",
     title: "Co-parenting when you and your ex don't agree on faith anymore",
     category: "Family & Relationships",
     categorySlug: "family-relationships",
@@ -184,7 +184,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "when-your-parents-are-still-in-and-getting-older",
-    path: "resources/family-relationships/when-your-parents-are-still-in-and-getting-older.html",
+    path: "/resources/family-relationships/when-your-parents-are-still-in-and-getting-older",
     title: "When your parents are still in and getting older",
     category: "Family & Relationships",
     categorySlug: "family-relationships",
@@ -199,7 +199,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "supporting-a-teenager-whos-questioning-their-faith",
-    path: "resources/family-relationships/supporting-a-teenager-whos-questioning-their-faith.html",
+    path: "/resources/family-relationships/supporting-a-teenager-whos-questioning-their-faith",
     title: "Supporting a teenager who's questioning their faith",
     category: "Family & Relationships",
     categorySlug: "family-relationships",
@@ -216,7 +216,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "why-addiction-shows-up-so-often-after-leaving",
-    path: "resources/addiction-family-recovery/why-addiction-shows-up-so-often-after-leaving.html",
+    path: "/resources/addiction-family-recovery/why-addiction-shows-up-so-often-after-leaving",
     title: "Why addiction shows up so often after leaving",
     category: "Addiction & Family Recovery",
     categorySlug: "addiction-family-recovery",
@@ -232,7 +232,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "recognising-the-signs-in-yourself-or-someone-you-love",
-    path: "resources/addiction-family-recovery/recognising-the-signs-in-yourself-or-someone-you-love.html",
+    path: "/resources/addiction-family-recovery/recognising-the-signs-in-yourself-or-someone-you-love",
     title: "Recognising the signs, in yourself or someone you love",
     category: "Addiction & Family Recovery",
     categorySlug: "addiction-family-recovery",
@@ -248,7 +248,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "healthy-coping-strategies-to-replace-whats-not-working",
-    path: "resources/addiction-family-recovery/healthy-coping-strategies-to-replace-whats-not-working.html",
+    path: "/resources/addiction-family-recovery/healthy-coping-strategies-to-replace-whats-not-working",
     title: "Healthy coping strategies to replace what's not working",
     category: "Addiction & Family Recovery",
     categorySlug: "addiction-family-recovery",
@@ -264,7 +264,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "understanding-shunning-why-its-designed-to-work",
-    path: "resources/recovery-from-shunning/understanding-shunning-why-its-designed-to-work.html",
+    path: "/resources/recovery-from-shunning/understanding-shunning-why-its-designed-to-work",
     title: "Understanding shunning: why it's designed to work",
     category: "Recovery from Shunning",
     categorySlug: "recovery-from-shunning",
@@ -279,7 +279,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "the-silence-after-what-the-first-few-months-of-being-shunned-actually-feel-like",
-    path: "resources/recovery-from-shunning/the-silence-after-what-the-first-few-months-of-being-shunned-actually-feel-like.html",
+    path: "/resources/recovery-from-shunning/the-silence-after-what-the-first-few-months-of-being-shunned-actually-feel-like",
     title: "The silence after: what the first few months of being shunned actually feel like",
     category: "Recovery from Shunning",
     categorySlug: "recovery-from-shunning",
@@ -294,7 +294,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "should-you-try-to-reconnect-or-let-it-rest-thinking-through-reinstatement-pressure",
-    path: "resources/recovery-from-shunning/should-you-try-to-reconnect-or-let-it-rest-thinking-through-reinstatement-pressure.html",
+    path: "/resources/recovery-from-shunning/should-you-try-to-reconnect-or-let-it-rest-thinking-through-reinstatement-pressure",
     title: "Should you try to reconnect, or let it rest?",
     category: "Recovery from Shunning",
     categorySlug: "recovery-from-shunning",
@@ -309,7 +309,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "going-back-to-school-as-an-adult-gcses-access-courses-and-where-to-start",
-    path: "resources/education-training/going-back-to-school-as-an-adult-gcses-access-courses-and-where-to-start.html",
+    path: "/resources/education-training/going-back-to-school-as-an-adult-gcses-access-courses-and-where-to-start",
     title: "Going back to school as an adult: GCSEs, Access courses, and where to start",
     category: "Education & Training",
     categorySlug: "education-training",
@@ -324,7 +324,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "is-university-actually-realistic-for-me",
-    path: "resources/education-training/is-university-actually-realistic-for-me.html",
+    path: "/resources/education-training/is-university-actually-realistic-for-me",
     title: "Is university actually realistic for me?",
     category: "Education & Training",
     categorySlug: "education-training",
@@ -339,7 +339,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "filling-educational-gaps-without-going-back-to-a-classroom",
-    path: "resources/education-training/filling-educational-gaps-without-going-back-to-a-classroom.html",
+    path: "/resources/education-training/filling-educational-gaps-without-going-back-to-a-classroom",
     title: "Filling educational gaps without going back to a classroom",
     category: "Education & Training",
     categorySlug: "education-training",
@@ -354,7 +354,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "discovering-what-you-actually-enjoy",
-    path: "resources/personal-growth/discovering-what-you-actually-enjoy.html",
+    path: "/resources/personal-growth/discovering-what-you-actually-enjoy",
     title: "Discovering what you actually enjoy",
     category: "Personal Growth",
     categorySlug: "personal-growth",
@@ -369,7 +369,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "setting-goals-when-youve-never-been-allowed-to-want-things-for-yourself",
-    path: "resources/personal-growth/setting-goals-when-youve-never-been-allowed-to-want-things-for-yourself.html",
+    path: "/resources/personal-growth/setting-goals-when-youve-never-been-allowed-to-want-things-for-yourself",
     title: "Setting goals when you've never been allowed to want things for yourself",
     category: "Personal Growth",
     categorySlug: "personal-growth",
@@ -384,7 +384,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "celebrating-how-far-youve-come",
-    path: "resources/personal-growth/celebrating-how-far-youve-come.html",
+    path: "/resources/personal-growth/celebrating-how-far-youve-come",
     title: "Celebrating how far you've come",
     category: "Personal Growth",
     categorySlug: "personal-growth",
@@ -399,7 +399,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "opening-bank-account",
-    path: "resources/financial-stability/opening-bank-account.html",
+    path: "/resources/financial-stability/opening-bank-account",
     title: "Opening a bank account for the first time",
     category: "Financial Stability",
     categorySlug: "financial-stability",
@@ -412,7 +412,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "budgeting-when-youre-starting-from-zero",
-    path: "resources/financial-stability/budgeting-when-youre-starting-from-zero.html",
+    path: "/resources/financial-stability/budgeting-when-youre-starting-from-zero",
     title: "Budgeting when you're starting from zero",
     category: "Financial Stability",
     categorySlug: "financial-stability",
@@ -428,7 +428,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "when-money-was-never-really-yours-to-control",
-    path: "resources/financial-stability/when-money-was-never-really-yours-to-control.html",
+    path: "/resources/financial-stability/when-money-was-never-really-yours-to-control",
     title: "When money was never really yours to control",
     category: "Financial Stability",
     categorySlug: "financial-stability",
@@ -443,7 +443,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "who-am-i-if-im-not-that-anymore",
-    path: "resources/emotional-wellbeing/who-am-i-if-im-not-that-anymore.html",
+    path: "/resources/emotional-wellbeing/who-am-i-if-im-not-that-anymore",
     title: "Who am I, if I'm not that anymore?",
     category: "Emotional Wellbeing",
     categorySlug: "emotional-wellbeing",
@@ -459,7 +459,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "learning-to-trust-your-own-judgement-again",
-    path: "resources/emotional-wellbeing/learning-to-trust-your-own-judgement-again.html",
+    path: "/resources/emotional-wellbeing/learning-to-trust-your-own-judgement-again",
     title: "Learning to trust your own judgement again",
     category: "Emotional Wellbeing",
     categorySlug: "emotional-wellbeing",
@@ -475,7 +475,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "why-some-days-are-harder-than-others-for-no-clear-reason",
-    path: "resources/emotional-wellbeing/why-some-days-are-harder-than-others-for-no-clear-reason.html",
+    path: "/resources/emotional-wellbeing/why-some-days-are-harder-than-others-for-no-clear-reason",
     title: "Why some days are harder than others, for no clear reason",
     category: "Emotional Wellbeing",
     categorySlug: "emotional-wellbeing",
@@ -491,7 +491,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "when-grief-doesnt-look-like-grief",
-    path: "resources/emotional-wellbeing/when-grief-doesnt-look-like-grief.html",
+    path: "/resources/emotional-wellbeing/when-grief-doesnt-look-like-grief",
     title: "When grief doesn't look like grief",
     category: "Emotional Wellbeing",
     categorySlug: "emotional-wellbeing",
@@ -505,7 +505,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "planning-your-exit",
-    path: "resources/leaving-safely/planning-your-exit.html",
+    path: "/resources/leaving-safely/planning-your-exit",
     title: "Planning your exit without tipping anyone off",
     category: "Leaving Safely",
     categorySlug: "leaving-safely",
@@ -521,7 +521,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "first-48-hours-after-leaving",
-    path: "resources/leaving-safely/first-48-hours-after-leaving.html",
+    path: "/resources/leaving-safely/first-48-hours-after-leaving",
     title: "What to expect in the first 48 hours after you leave",
     category: "Leaving Safely",
     categorySlug: "leaving-safely",
@@ -537,7 +537,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "how-do-you-know-if-youre-ready-to-leave",
-    path: "resources/leaving-safely/how-do-you-know-if-youre-ready-to-leave.html",
+    path: "/resources/leaving-safely/how-do-you-know-if-youre-ready-to-leave",
     title: "How do you know if you're ready to leave?",
     category: "Leaving Safely",
     categorySlug: "leaving-safely",
@@ -553,7 +553,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "leaving-when-youre-also-coming-out",
-    path: "resources/lgbtq-support/leaving-when-youre-also-coming-out.html",
+    path: "/resources/lgbtq-support/leaving-when-youre-also-coming-out",
     title: "Leaving when you're also coming out",
     category: "LGBTQ+ Support",
     categorySlug: "lgbtq-support",
@@ -569,7 +569,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "unlearning-shame-that-was-taught-as-fact",
-    path: "resources/lgbtq-support/unlearning-shame-that-was-taught-as-fact.html",
+    path: "/resources/lgbtq-support/unlearning-shame-that-was-taught-as-fact",
     title: "Unlearning shame that was taught as fact",
     category: "LGBTQ+ Support",
     categorySlug: "lgbtq-support",
@@ -585,7 +585,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "finding-lgbtq-community-when-you-missed-out-on-it-growing-up",
-    path: "resources/lgbtq-support/finding-lgbtq-community-when-you-missed-out-on-it-growing-up.html",
+    path: "/resources/lgbtq-support/finding-lgbtq-community-when-you-missed-out-on-it-growing-up",
     title: "Finding LGBTQ+ community when you missed out on it growing up",
     category: "LGBTQ+ Support",
     categorySlug: "lgbtq-support",
@@ -601,7 +601,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "having-doubts-about-what-youve-been-taught",
-    path: "resources/for-teenagers/having-doubts-about-what-youve-been-taught.html",
+    path: "/resources/for-teenagers/having-doubts-about-what-youve-been-taught",
     title: "Having doubts about what you've been taught? You're not alone",
     category: "For Teenagers",
     categorySlug: "for-teenagers",
@@ -617,7 +617,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "you-dont-have-to-have-it-all-figured-out-yet",
-    path: "resources/for-teenagers/you-dont-have-to-have-it-all-figured-out-yet.html",
+    path: "/resources/for-teenagers/you-dont-have-to-have-it-all-figured-out-yet",
     title: "You don't have to have it all figured out yet",
     category: "For Teenagers",
     categorySlug: "for-teenagers",
@@ -633,7 +633,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "renting-for-the-first-time-deposits-contracts-and-what-to-watch-for",
-    path: "resources/housing/renting-for-the-first-time-deposits-contracts-and-what-to-watch-for.html",
+    path: "/resources/housing/renting-for-the-first-time-deposits-contracts-and-what-to-watch-for",
     title: "Renting for the first time: deposits, contracts, and what to watch for",
     category: "Housing",
     categorySlug: "housing",
@@ -649,7 +649,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "what-to-do-if-youre-at-risk-of-homelessness",
-    path: "resources/housing/what-to-do-if-youre-at-risk-of-homelessness.html",
+    path: "/resources/housing/what-to-do-if-youre-at-risk-of-homelessness",
     title: "What to do if you're at risk of homelessness",
     category: "Housing",
     categorySlug: "housing",
@@ -665,7 +665,7 @@ window.RESOURCE_ARTICLES = [
   },
   {
     slug: "setting-up-a-home-from-nothing",
-    path: "resources/housing/setting-up-a-home-from-nothing.html",
+    path: "/resources/housing/setting-up-a-home-from-nothing",
     title: "Setting up a home from nothing",
     category: "Housing",
     categorySlug: "housing",
@@ -686,8 +686,8 @@ window.RESOURCE_ARTICLES = [
  * @returns {string}
  */
 window.resourceCategoryUrl = function resourceCategoryUrl(categorySlug) {
-  if (!categorySlug) return "resources.html";
-  return `resources.html?category=${encodeURIComponent(categorySlug)}`;
+  if (!categorySlug) return "/resources";
+  return `/resources?category=${encodeURIComponent(categorySlug)}`;
 };
 
 /**

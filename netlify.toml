@@ -3,6 +3,18 @@
   command = "test -f js/supabase-config.js || cp js/supabase-config.example.js js/supabase-config.js"
   publish = "."
 
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+# /resources also exists as a folder of articles. Prefer the listing page.
+[[redirects]]
+  from = "/resources"
+  to = "/resources.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]

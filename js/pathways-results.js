@@ -89,7 +89,7 @@
   function renderActions(actions) {
     if (!actionsEl) return;
     var extra = actions.filter(function (item) {
-      return !/apply\.html(?:$|[?#])/.test(item.href);
+      return !/\/apply(?:\.html)?(?:$|[?#])/.test(item.href);
     });
     if (!extra.length) {
       actionsEl.hidden = true;
@@ -170,7 +170,7 @@
     readingEl.hidden = false;
     readingEl.innerHTML =
       "<h2>If you want something to read</h2>" +
-      '<p class="pathways-results-reading-lead">A few from our list that fit what you ticked. Take what helps, leave the rest. <a href="reading-recommendations.html">See the full reading list</a>.</p>' +
+      '<p class="pathways-results-reading-lead">A few from our list that fit what you ticked. Take what helps, leave the rest. <a href="/reading-recommendations">See the full reading list</a>.</p>' +
       '<div class="pathways-reading-grid">' +
       picks
         .map(function (item) {

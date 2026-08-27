@@ -327,7 +327,7 @@
 
   function handleSaveExit() {
     saveDraft();
-    window.location.href = "index.html";
+    window.location.href = "/";
   }
 
   function showConfirmation() {

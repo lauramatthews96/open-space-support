@@ -4,20 +4,29 @@ const year = document.getElementById("year");
 
 if (year) year.textContent = String(new Date().getFullYear());
 
+function pageKey(value) {
+  const name = String(value || "")
+    .split("/")
+    .pop()
+    .split("?")[0]
+    .replace(/\.html$/, "");
+  return name || "index";
+}
+
 function getCurrentPage() {
-  const page = window.location.pathname.split("/").pop();
-  return page || "index.html";
+  return pageKey(window.location.pathname);
 }
 
 function isResourcesPath() {
   const path = window.location.pathname;
+  const page = getCurrentPage();
   return (
     path.includes("/resources/") ||
-    getCurrentPage() === "resources.html" ||
-    getCurrentPage() === "external-resources.html" ||
-    getCurrentPage() === "reading-recommendations.html" ||
-    getCurrentPage() === "research-evidence.html" ||
-    getCurrentPage() === "your-resources.html"
+    page === "resources" ||
+    page === "external-resources" ||
+    page === "reading-recommendations" ||
+    page === "research-evidence" ||
+    page === "your-resources"
   );
 }
 
@@ -35,7 +44,7 @@ function setActiveNav() {
     const href = link.getAttribute("href");
     if (!href) return;
 
-    const linkPage = href.split("/").pop().split("?")[0] || "index.html";
+    const linkPage = pageKey(href);
     const isActive = linkPage === currentPage;
 
     link.classList.toggle("is-active", isActive);
@@ -63,7 +72,7 @@ function setActiveNav() {
 
   dropdownLinks.forEach((link) => {
     const href = link.getAttribute("href") || "";
-    const linkPage = href.split("/").pop().split("?")[0];
+    const linkPage = pageKey(href);
     const linkCategory = href.includes("category=")
       ? new URLSearchParams(href.split("?")[1] || "").get("category")
       : "";
@@ -71,11 +80,15 @@ function setActiveNav() {
     let isActive = false;
 
     if (linkPage === currentPage) {
-      if (currentPage === "resources.html" && linkCategory) {
+      if (currentPage === "resources" && linkCategory) {
         isActive = linkCategory === resourcesCategory;
-      } else if (currentPage === "resources.html" && !linkCategory && href.includes("resources.html")) {
-        isActive = !resourcesCategory && href.indexOf("category=") === -1;
-      } else if (currentPage !== "resources.html") {
+      } else if (
+        currentPage === "resources" &&
+        !linkCategory &&
+        href.split("?")[0].replace(/\/$/, "") === "/resources"
+      ) {
+        isActive = !resourcesCategory;
+      } else if (currentPage !== "resources") {
         isActive = true;
       }
     }
