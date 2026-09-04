@@ -139,6 +139,10 @@
   object-position: 46% 30%;
 }
 
+.counsellor-photo--hs img {
+  object-position: 48% 22%;
+}
+
 .counsellor-body {
   display: flex;
   flex-direction: column;
@@ -209,6 +213,28 @@
   margin: 0;
   font-size: 0.92rem;
   color: var(--text);
+}
+
+.counsellor-certificates {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+  margin-top: 0.85rem;
+}
+
+.counsellor-certificates a {
+  display: block;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid rgba(27, 75, 74, 0.14);
+  background: var(--white);
+}
+
+.counsellor-certificates img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 .counsellor-request {
