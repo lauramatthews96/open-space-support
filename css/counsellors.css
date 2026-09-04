@@ -112,8 +112,9 @@
 .counsellor-photo {
   position: relative;
   margin: 0;
-  min-height: 0;
-  align-self: stretch;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  align-self: start;
   overflow: hidden;
   background: var(--frame-bg);
 }
@@ -131,8 +132,12 @@
   object-position: 50% 18%;
 }
 
+.counsellor-photo--nz {
+  aspect-ratio: 2 / 3;
+}
+
 .counsellor-photo--nz img {
-  object-position: 50% 12%;
+  object-position: 50% 15%;
 }
 
 .counsellor-photo--rl img {
@@ -141,6 +146,10 @@
 
 .counsellor-photo--hs img {
   object-position: 48% 22%;
+}
+
+.counsellor-photo--sb img {
+  object-position: 50% 18%;
 }
 
 .counsellor-body {
@@ -217,9 +226,10 @@
 
 .counsellor-certificates {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.7rem;
-  margin-top: 0.85rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  width: min(100%, 20rem);
+  margin: 0 0 1.15rem;
 }
 
 .counsellor-certificates a {
@@ -234,7 +244,6 @@
   display: block;
   width: 100%;
   height: auto;
-  vertical-align: middle;
 }
 
 .counsellor-request {
@@ -280,6 +289,11 @@
   .counsellor-photo {
     aspect-ratio: 1 / 1;
     min-height: 0;
+    max-width: none;
+  }
+
+  .counsellor-photo--nz {
+    aspect-ratio: 2 / 3;
   }
 
   .counsellor-body {
