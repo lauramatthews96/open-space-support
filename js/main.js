@@ -179,6 +179,62 @@ document.querySelectorAll("[data-nav-dropdown]").forEach((dropdown) => {
   });
 });
 
+(function initCookieBanner() {
+  var key = "oss_cookie_consent_v1";
+  try {
+    if (localStorage.getItem(key) === "accepted") return;
+  } catch (e) {
+    /* storage blocked */
+  }
+
+  var banner = document.createElement("div");
+  banner.className = "cookie-banner";
+  banner.setAttribute("role", "region");
+  banner.setAttribute("aria-label", "Cookie notice");
+  banner.setAttribute("aria-describedby", "cookie-banner-text");
+  banner.innerHTML =
+    '<div class="cookie-banner-inner">' +
+    '<p id="cookie-banner-text">' +
+    "We use cookies so this site can work. We do not use them for advertising. " +
+    '<a href="/cookies">Cookie Policy</a>' +
+    "</p>" +
+    '<button type="button" class="btn btn-gold cookie-banner-accept" data-cookie-accept>' +
+    "Accept" +
+    "</button>" +
+    "</div>";
+
+  document.body.appendChild(banner);
+  document.body.classList.add("cookie-banner-open");
+
+  function setBannerHeight() {
+    document.body.style.setProperty(
+      "--cookie-banner-h",
+      banner.offsetHeight + "px"
+    );
+  }
+
+  var resizeObserver = null;
+  setBannerHeight();
+  window.addEventListener("resize", setBannerHeight);
+  if (typeof ResizeObserver === "function") {
+    resizeObserver = new ResizeObserver(setBannerHeight);
+    resizeObserver.observe(banner);
+  }
+
+  banner.querySelector("[data-cookie-accept]").addEventListener("click", function () {
+    try {
+      localStorage.setItem(key, "accepted");
+    } catch (e) {
+      /* storage blocked */
+    }
+    window.removeEventListener("resize", setBannerHeight);
+    if (resizeObserver) resizeObserver.disconnect();
+    banner.remove();
+    document.body.classList.remove("cookie-banner-open");
+    document.body.style.removeProperty("--cookie-banner-h");
+  });
+})();
+
 (function initQuickExit() {
   var el = document.querySelector(".quick-exit");
   if (!el) return;
