@@ -506,7 +506,4 @@
     max-width: none;
   }
 
-  body.cookie-banner-open .quick-exit-apply {
-    bottom: calc(0.75rem + var(--cookie-banner-h, 0px));
-  }
 }
