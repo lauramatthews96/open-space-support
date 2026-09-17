@@ -152,6 +152,10 @@
   object-position: 50% 18%;
 }
 
+.counsellor-photo--rt img {
+  object-position: 48% 28%;
+}
+
 .counsellor-body {
   display: flex;
   flex-direction: column;
@@ -244,6 +248,11 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.counsellor-certificates--three {
+  grid-template-columns: 1fr 1fr 1fr;
+  width: min(100%, 31rem);
 }
 
 .counsellor-request {
